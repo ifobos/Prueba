@@ -9,36 +9,22 @@
 import Foundation
 
 protocol TokenServiceProtocol {
-    func setup()
     var accessToken: String? { get }
     func fetchToken(completion: ((String?) -> Void)?)
 }
 
 class TokenService: TokenServiceProtocol {
-    private enum Constant {
+    
+    enum Constant {
         static let secureKey = "access_token"
     }
-    static let shared: TokenServiceProtocol = TokenService()
     
     // MARK: - Dependencies
     lazy var requester = RequesterFactory.newRequester()
     lazy var decoder = JSONDecoder()
     lazy var tokenStorage = TokenStorageFactory.newSecureStringStorage()
     lazy var userConfigurations = UserConfigurations()
-    
-    // MARK: - Setup
-    private init() {}
-    
-    func setup() {
-        // in case this is the first launch of a new
-        // installation having deleted a previous installation
-        // removes the token from the previous installation
-        if !userConfigurations.wasLaunchedBefore {
-            try? tokenStorage.remove(Constant.secureKey)
-            userConfigurations.wasLaunchedBefore = true
-        }
-    }
-    
+
     // MARK: - Token handling
     /// computed property that returns the application access token
     var accessToken: String? {
@@ -49,7 +35,6 @@ class TokenService: TokenServiceProtocol {
     }
     
     /// function that performs the request for a new token to store in the storage token
-    
     func fetchToken(completion: ((String?) -> Void)? = nil) {
         let tokenRequestConfiguration = TokenRequestConfiguration(clientId: AppConfiguration.shared.clientId,
                                                                   clientSecret: AppConfiguration.shared.clientSecret)
