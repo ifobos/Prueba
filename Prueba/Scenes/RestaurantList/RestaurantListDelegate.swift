@@ -28,5 +28,4 @@ class RestaurantListDelegate: NSObject, UITableViewDelegate {
         return 50
     }
 
-
 }
