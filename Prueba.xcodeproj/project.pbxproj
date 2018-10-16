@@ -13,6 +13,12 @@
 		7D099CCB2175BCD900C903FE /* AlamoRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D099CCA2175BCD900C903FE /* AlamoRequestAdapter.swift */; };
 		7D099CCD2175D49A00C903FE /* AuthRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D099CCC2175D49A00C903FE /* AuthRetrier.swift */; };
 		7D099CCF2175D90000C903FE /* AuthAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D099CCE2175D90000C903FE /* AuthAdapter.swift */; };
+		7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */; };
+		7DB784FD21764FC900984288 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB784FC21764FC900984288 /* CoreLocation.framework */; };
+		7DB784FF21764FF000984288 /* CoreLocationLocalizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */; };
+		7DB78502217651E500984288 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB78501217651E500984288 /* Localizator.swift */; };
+		7DB785042176591900984288 /* LocalizatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB785032176591900984288 /* LocalizatorFactory.swift */; };
+		7DB7850621765D7600984288 /* LocationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7850521765D7600984288 /* LocationCoordinate.swift */; };
 		7DBD7EE22172A5410010218A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7EE12172A5410010218A /* AppDelegate.swift */; };
 		7DBD7EE72172A5410010218A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD7EE52172A5410010218A /* Main.storyboard */; };
 		7DBD7EE92172A5420010218A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD7EE82172A5420010218A /* Assets.xcassets */; };
@@ -65,6 +71,12 @@
 		7D099CCC2175D49A00C903FE /* AuthRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRetrier.swift; sourceTree = "<group>"; };
 		7D099CCE2175D90000C903FE /* AuthAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAdapter.swift; sourceTree = "<group>"; };
 		7D514F73B47EF77CDE15DE32 /* Pods_Prueba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prueba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceConfigurator.swift; sourceTree = "<group>"; };
+		7DB784FC21764FC900984288 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationLocalizator.swift; sourceTree = "<group>"; };
+		7DB78501217651E500984288 /* Localizator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
+		7DB785032176591900984288 /* LocalizatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizatorFactory.swift; sourceTree = "<group>"; };
+		7DB7850521765D7600984288 /* LocationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinate.swift; sourceTree = "<group>"; };
 		7DBD7EDE2172A5410010218A /* Prueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBD7EE12172A5410010218A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DBD7EE62172A5410010218A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB784FD21764FC900984288 /* CoreLocation.framework in Frameworks */,
 				2BEA8C3B1DCB5042BE93D097 /* Pods_Prueba.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +139,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DB784F9217645BE00984288 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				7DB78501217651E500984288 /* Localizator.swift */,
+				7DB785032176591900984288 /* LocalizatorFactory.swift */,
+				7DB78500217651B600984288 /* CoreLocationImplementation */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		7DB78500217651B600984288 /* CoreLocationImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */,
+			);
+			path = CoreLocationImplementation;
+			sourceTree = "<group>";
+		};
 		7DBD7ED52172A5400010218A = {
 			isa = PBXGroup;
 			children = (
@@ -150,11 +181,12 @@
 			isa = PBXGroup;
 			children = (
 				7DBD7F402175329B0010218A /* AppConfiguration */,
-				7DBD7F37217520DC0010218A /* Utils */,
 				7DBD7F0B2173D30B0010218A /* Services */,
+				7DBD7F1921741B780010218A /* Models */,
+				7DBD7F37217520DC0010218A /* Utils */,
+				7DB784F9217645BE00984288 /* Location */,
 				7DBD7F242174C1D20010218A /* UserConfigurationStorage */,
 				7DBD7F1C2174241D0010218A /* SecureStorage */,
-				7DBD7F1921741B780010218A /* Models */,
 				7DBD7F01217379090010218A /* API Client */,
 				7DBD7F4121753C700010218A /* Scenes */,
 				7DBD7EE12172A5410010218A /* AppDelegate.swift */,
@@ -225,6 +257,7 @@
 				7DBD7F1A21741B980010218A /* Token.swift */,
 				7DBD7F3521751D840010218A /* Restaurant.swift */,
 				7DBD7F3C2175296B0010218A /* RestaurantSearchResult.swift */,
+				7DB7850521765D7600984288 /* LocationCoordinate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				7DBD7F0E2173D6BE0010218A /* AppConfiguration.swift */,
+				7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */,
 			);
 			path = AppConfiguration;
 			sourceTree = "<group>";
@@ -316,6 +350,7 @@
 		E32BF2D57F4697FE97CFCA9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DB784FC21764FC900984288 /* CoreLocation.framework */,
 				7D514F73B47EF77CDE15DE32 /* Pods_Prueba.framework */,
 				B20FD7AB14491520F8196EAC /* Pods_PruebaTests.framework */,
 			);
@@ -519,23 +554,28 @@
 				7DBD7F0D2173D6820010218A /* RequestConfiguration.swift in Sources */,
 				7D099CC92175AB6800C903FE /* AlamoRequestRetrier.swift in Sources */,
 				7DBD7F2321744E820010218A /* Requester.swift in Sources */,
+				7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */,
 				7DBD7F1B21741B980010218A /* Token.swift in Sources */,
 				7DBD7F06217398350010218A /* AlamoRequestConvertible.swift in Sources */,
 				7DBD7F082173B9870010218A /* AlamoRequester.swift in Sources */,
+				7DB78502217651E500984288 /* Localizator.swift in Sources */,
 				7DBD7F4321753CF10010218A /* RestaurantListViewController.swift in Sources */,
 				7DBD7F4E2175590E0010218A /* RestaurantListFetcher.swift in Sources */,
 				7DBD7F312174EBCC0010218A /* RequesterFactory.swift in Sources */,
 				7DBD7F282174C9C20010218A /* UserConfiguration.swift in Sources */,
 				7DBD7F3F21752DB60010218A /* Pagination.swift in Sources */,
 				7DBD7F03217379290010218A /* Request.swift in Sources */,
+				7DB7850621765D7600984288 /* LocationCoordinate.swift in Sources */,
 				7DBD7F34217508700010218A /* SearchRestaurantsRequestConfiguration.swift in Sources */,
 				7DBD7F4621753E7C0010218A /* RestaurantListDataSource.swift in Sources */,
 				7DBD7F262174C2160010218A /* UserDefaults.swift in Sources */,
+				7DB784FF21764FF000984288 /* CoreLocationLocalizator.swift in Sources */,
 				7DBD7F0F2173D6BE0010218A /* AppConfiguration.swift in Sources */,
 				7DBD7F3D2175296B0010218A /* RestaurantSearchResult.swift in Sources */,
 				7DBD7EE22172A5410010218A /* AppDelegate.swift in Sources */,
 				7DBD7F202174253D0010218A /* KeychainAccess.swift in Sources */,
 				7D099CCF2175D90000C903FE /* AuthAdapter.swift in Sources */,
+				7DB785042176591900984288 /* LocalizatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
