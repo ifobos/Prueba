@@ -13,7 +13,7 @@ class AuthAdapter {
         static let authorizationKey = "Authorization"
     }
     
-    lazy var tokenService = TokenService.shared
+    lazy var tokenService: TokenServiceProtocol = TokenService()
     
     func authRequest(from urlRequest: URLRequest) -> URLRequest {
         var urlRequest = urlRequest

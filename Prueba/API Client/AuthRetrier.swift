@@ -12,7 +12,7 @@ class AuthRetrier {
     private enum Constant {
         static let forbiddenStatusCode = 403
     }
-    lazy var tokenService = TokenService.shared
+    lazy var tokenService: TokenServiceProtocol = TokenService()
     var isRefreshing = false
     
     func isAuthError(for response: URLResponse?) -> Bool {
