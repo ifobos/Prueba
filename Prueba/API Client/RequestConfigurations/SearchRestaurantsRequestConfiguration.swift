@@ -10,7 +10,7 @@ import Foundation
 
 struct SearchRestaurantsRequestConfiguration: RequestConfiguration {
     
-    let point: (latitude: Double, longitude: Double)
+    let locationCoordinate: LocationCoordinate
     let country: Int
     let pageSize: Int
     let offset: Int
@@ -25,7 +25,7 @@ struct SearchRestaurantsRequestConfiguration: RequestConfiguration {
     }
     
     var parameters: Parameters? {
-        return ["point": "\(point.latitude),\(point.longitude)",
+        return ["point": "\(locationCoordinate.latitude),\(locationCoordinate.longitude)",
                 "country": country,
                 "max": pageSize,
                 "offset": offset,
