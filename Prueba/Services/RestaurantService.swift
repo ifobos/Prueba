@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RestaurantServiceProtocol {
-    func search(by point: (latitude: Double, longitude: Double),
+    func search(by locationCoordinate: LocationCoordinate,
                 pagination: PaginationProtocol,
                 completion: @escaping (RestaurantSearchResult?) -> Void )
 }
@@ -19,15 +19,15 @@ class RestaurantService: RestaurantServiceProtocol {
     // MARK: - Dependencies
     lazy var requester = RequesterFactory.newRequester()
     lazy var decoder = JSONDecoder()
-    lazy var tokenService = TokenService.shared
+    lazy var tokenService: TokenServiceProtocol = TokenService()
     lazy var appConfiguration = AppConfiguration.shared
     
     // MARK: - Search handling
-    func search(by point: (latitude: Double, longitude: Double),
+    func search(by locationCoordinate: LocationCoordinate,
                 pagination: PaginationProtocol,
                 completion: @escaping (RestaurantSearchResult?) -> Void ) {
         
-        let requestConfiguration = SearchRestaurantsRequestConfiguration(point: point,
+        let requestConfiguration = SearchRestaurantsRequestConfiguration(locationCoordinate: locationCoordinate,
                                                                          country: appConfiguration.defaultCountryId,
                                                                          pageSize: pagination.pageSize,
                                                                          offset: pagination.offset,

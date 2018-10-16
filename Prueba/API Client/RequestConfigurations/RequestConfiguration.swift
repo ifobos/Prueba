@@ -30,7 +30,7 @@ protocol RequestConfiguration {
     var path: String { get }
     var method: HTTPMethod { get }
     var parameters: Parameters? { get }
-    var appAuthRequired : Bool { get }
+    var appAuthRequired: Bool { get }
 }
 
 extension RequestConfiguration {
@@ -38,7 +38,7 @@ extension RequestConfiguration {
         return nil
     }
     
-    var appAuthRequired : Bool {
+    var appAuthRequired: Bool {
         return false
     }
     

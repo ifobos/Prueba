@@ -23,8 +23,8 @@ class RestaurantListFetcher: NSObject {
     @IBOutlet weak var store: RestaurantListStore?
     @IBOutlet weak var loader: RestaurantListLoader?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
-    var pagination: PaginationProtocol = Pagination()
     var restaurantService: RestaurantServiceProtocol = RestaurantService()
+    var localizator = LocalizatorFactory.newLocalizator()
     
     // MARK: - Fetch handling
     func fetch() {
@@ -32,8 +32,29 @@ class RestaurantListFetcher: NSObject {
             return
         }
         isFetching = true
-        restaurantService.search(by: (-34.90469, -56.19264), pagination: pagination) { [weak self] (searchResult) in
+        let completion: () -> Void = { [weak self] in
             self?.isFetching = false
+        }
+        
+        // if there is a lastLocationCoordinate then do the search for that coordinate,
+        // otherwise set the coordinate of the device as lastLocationCoordinate
+        if let coordinate = store?.lastLocationCoordinate {
+            fetchRestaurants(by: coordinate, completion: completion)
+        } else {
+            localizator.currentLocation { [weak self] (coordinate) in
+                self?.store?.lastLocationCoordinate = coordinate
+                self?.fetchRestaurants(by: coordinate, completion: completion)
+            }
+        }
+        
+    }
+    
+    func fetchRestaurants(by location: LocationCoordinate, completion: @escaping () -> Void) {
+        guard let pagination = store?.pagination else {
+            return
+        }
+        restaurantService.search(by: location, pagination: pagination) { [weak self] (searchResult) in
+            completion()
             print("\(searchResult as Any)")
             guard let result = searchResult,
                 let data = result.data,
@@ -42,11 +63,11 @@ class RestaurantListFetcher: NSObject {
                 let total = result.total,
                 offset < total else {
                     print("\(String(describing: searchResult))")
-                return
+                    return
             }
             
             self?.store?.restaurants.append(contentsOf: data)
-            self?.pagination.offset = offset + count
+            self?.store?.pagination.offset = offset + count
             self?.loader?.reload()
         }
     }

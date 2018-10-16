@@ -9,5 +9,19 @@
 import UIKit
 
 class RestaurantListStore: NSObject {
+    
+    var lastLocationCoordinate: LocationCoordinate? {
+        willSet {
+            if newValue == lastLocationCoordinate {
+                return
+            }
+            restaurants.removeAll()
+            pagination = Pagination()
+        }
+    }
+    
+    var pagination: PaginationProtocol = Pagination()
+
     var restaurants = [Restaurant]()
+    
 }
