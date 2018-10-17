@@ -8,11 +8,16 @@
 
 import Foundation
 
-struct GeoPoint: Equatable {
+struct GeoPoint: Equatable, CustomStringConvertible {
     let latitude: Double
     let longitude: Double
     
     static func == (lhs: GeoPoint, rhs: GeoPoint) -> Bool {
         return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
     }
+    
+    var description: String {
+        return "\(latitude), \(longitude)"
+    }
+
 }
