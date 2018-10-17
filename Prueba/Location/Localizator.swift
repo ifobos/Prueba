@@ -9,5 +9,5 @@
 import Foundation
 
 protocol LocalizatorProtocol {
-    func currentLocation(completion: @escaping (LocationCoordinate) -> Void)
+    func currentLocation(completion: @escaping (GeoPoint) -> Void)
 }

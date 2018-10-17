@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RestaurantServiceProtocol {
-    func search(by locationCoordinate: LocationCoordinate,
+    func search(by location: GeoPoint,
                 pagination: PaginationProtocol,
                 completion: @escaping (RestaurantSearchResult?) -> Void )
 }
@@ -23,11 +23,11 @@ class RestaurantService: RestaurantServiceProtocol {
     lazy var appConfiguration = AppConfiguration.shared
     
     // MARK: - Search handling
-    func search(by locationCoordinate: LocationCoordinate,
+    func search(by location: GeoPoint,
                 pagination: PaginationProtocol,
                 completion: @escaping (RestaurantSearchResult?) -> Void ) {
         
-        let requestConfiguration = SearchRestaurantsRequestConfiguration(locationCoordinate: locationCoordinate,
+        let requestConfiguration = SearchRestaurantsRequestConfiguration(location: location,
                                                                          country: appConfiguration.defaultCountryId,
                                                                          pageSize: pagination.pageSize,
                                                                          offset: pagination.offset,
