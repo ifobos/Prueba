@@ -17,6 +17,21 @@ struct Restaurant: Decodable {
         case coordinates
     }
     
+    var location: GeoPoint? {
+        guard let `coordinates` = coordinates else {
+            return nil
+        }
+        let coordinatesValues = coordinates.split(separator: ",")
+        guard coordinatesValues.count == 2,
+            let latitudeString = coordinatesValues.first,
+            let longitudeString = coordinatesValues.last,
+            let latitude = Double(latitudeString),
+            let longitude = Double(longitudeString) else {
+            return nil
+        }
+        return GeoPoint(latitude: latitude, longitude: longitude)
+    }
+    
     static var fields: [String] {
         return Restaurant.CodingKeys.allCases.map({ (key) -> String in
             return key.rawValue
