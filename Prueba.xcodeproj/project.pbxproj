@@ -192,6 +192,18 @@
 			path = MyLocation;
 			sourceTree = "<group>";
 		};
+		7D2724C5217797B0005D7415 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD7F01217379090010218A /* API Client */,
+				7DBD7F1C2174241D0010218A /* SecureStorage */,
+				7DBD7F242174C1D20010218A /* UserConfigurationStorage */,
+				7DB784F9217645BE00984288 /* Location */,
+				7DB785082176931C00984288 /* Maps */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		7DB784F9217645BE00984288 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,15 +276,11 @@
 		7DBD7EE02172A5410010218A /* Prueba */ = {
 			isa = PBXGroup;
 			children = (
-				7DB785082176931C00984288 /* Maps */,
+				7D2724C5217797B0005D7415 /* Dependencies */,
 				7DBD7F402175329B0010218A /* AppConfiguration */,
 				7DBD7F0B2173D30B0010218A /* Services */,
 				7DBD7F1921741B780010218A /* Models */,
 				7DBD7F37217520DC0010218A /* Utils */,
-				7DB784F9217645BE00984288 /* Location */,
-				7DBD7F242174C1D20010218A /* UserConfigurationStorage */,
-				7DBD7F1C2174241D0010218A /* SecureStorage */,
-				7DBD7F01217379090010218A /* API Client */,
 				7DBD7F4121753C700010218A /* Scenes */,
 				7DBD7EE12172A5410010218A /* AppDelegate.swift */,
 				7DBD7EE52172A5410010218A /* Main.storyboard */,
