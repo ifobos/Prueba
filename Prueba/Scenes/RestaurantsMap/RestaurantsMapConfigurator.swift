@@ -21,7 +21,7 @@ class RestaurantsMapConfigurator: NSObject {
             let `mapContainer` = mapContainer else {
             return
         }
-        configurator.setup(in: mapContainer, location: location, pickerEnable: true)
+        configurator.setup(in: mapContainer, location: location, pickerEnable: false)
         configurator.didChangePosition { [weak self] (newLocation) in
             self?.store?.lastLocation = newLocation
             self?.fetcher?.fetch()
