@@ -13,7 +13,6 @@ class RestaurantListLoader: NSObject {
     @IBOutlet weak var tableView: UITableView?
     
     func reload() {
-//        tableView?.reloadData()
         UIView.performWithoutAnimation {
             tableView?.reloadSections([0], with: .none)
         }
