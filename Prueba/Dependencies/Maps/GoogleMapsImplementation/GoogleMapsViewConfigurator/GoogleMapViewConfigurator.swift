@@ -29,10 +29,15 @@ class GoogleMapViewConfigurator: NSObject, MapViewConfiguratorProtocol {
     var didChangePosition: ((GeoPoint) -> Void)?
     var locationsPresented = [String]()
     
-    func setup(in view: UIView, location: GeoPoint) {
+    var pickerMarker: GMSMarker?
+    
+    func setup(in view: UIView, location: GeoPoint, pickerEnable: Bool) {
         mapView.delegate = self
         setupView(view)
         setupCamera(location)
+        if pickerEnable {
+            setupPickerMarker(with: location)
+        }
     }
     
     func loadRestaurants(_ restaurants: [Restaurant]?) {
@@ -59,6 +64,14 @@ class GoogleMapViewConfigurator: NSObject, MapViewConfiguratorProtocol {
     
     func didChangePosition(_ block: @escaping (GeoPoint) -> Void) {
         self.didChangePosition = block
+    }
+    
+    func selectedLocation() -> GeoPoint? {
+        guard let position = pickerMarker?.position else {
+            return nil
+        }
+        return GeoPoint(latitude: position.latitude,
+                        longitude: position.longitude)
     }
 
 }

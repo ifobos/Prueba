@@ -12,11 +12,15 @@ import GoogleMaps
 extension GoogleMapViewConfigurator: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        guard let `defaultCamera` = defaultCamera else {
-            return
+        if let `defaultCamera` = defaultCamera {
+            mapView.camera = defaultCamera
+            self.defaultCamera = nil
         }
-        self.defaultCamera = nil
-        mapView.camera = defaultCamera
+        if let `pickerMarker` = pickerMarker {
+            pickerMarker.position = CLLocationCoordinate2D(latitude: position.target.latitude,
+                                                           longitude: position.target.longitude)
+
+        }
     }
     
     func mapViewSnapshotReady(_ mapView: GMSMapView) {

@@ -17,10 +17,11 @@ class RestaurantsMapConfigurator: NSObject {
     lazy var configurator = MapViewConfiguratorFactory.newMapViewConfigurator()
 
     func setup() {
-        guard let location = store?.lastLocation else {
+        guard let location = store?.lastLocation,
+            let `mapContainer` = mapContainer else {
             return
         }
-        configurator.setup(in: mapContainer!, location: location)
+        configurator.setup(in: mapContainer, location: location, pickerEnable: false)
         configurator.didChangePosition { [weak self] (newLocation) in
             self?.store?.lastLocation = newLocation
             self?.fetcher?.fetch()

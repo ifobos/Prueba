@@ -14,6 +14,10 @@
 		7D099CCD2175D49A00C903FE /* AuthRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D099CCC2175D49A00C903FE /* AuthRetrier.swift */; };
 		7D099CCF2175D90000C903FE /* AuthAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D099CCE2175D90000C903FE /* AuthAdapter.swift */; };
 		7D2724B72176FA13005D7415 /* AbstractRestaurantsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724B62176FA13005D7415 /* AbstractRestaurantsFetcher.swift */; };
+		7D2724BE21772E12005D7415 /* MyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724BD21772E12005D7415 /* MyLocationViewController.swift */; };
+		7D2724C021772E8E005D7415 /* MyLocationMapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724BF21772E8E005D7415 /* MyLocationMapConfigurator.swift */; };
+		7D2724C221772F6E005D7415 /* MyLocationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724C121772F6E005D7415 /* MyLocationStore.swift */; };
+		7D2724C4217732AF005D7415 /* MyLocationActioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724C3217732AF005D7415 /* MyLocationActioner.swift */; };
 		7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */; };
 		7DB784FD21764FC900984288 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB784FC21764FC900984288 /* CoreLocation.framework */; };
 		7DB784FF21764FF000984288 /* CoreLocationLocalizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */; };
@@ -83,6 +87,10 @@
 		7D099CCC2175D49A00C903FE /* AuthRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRetrier.swift; sourceTree = "<group>"; };
 		7D099CCE2175D90000C903FE /* AuthAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAdapter.swift; sourceTree = "<group>"; };
 		7D2724B62176FA13005D7415 /* AbstractRestaurantsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRestaurantsFetcher.swift; sourceTree = "<group>"; };
+		7D2724BD21772E12005D7415 /* MyLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationViewController.swift; sourceTree = "<group>"; };
+		7D2724BF21772E8E005D7415 /* MyLocationMapConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationMapConfigurator.swift; sourceTree = "<group>"; };
+		7D2724C121772F6E005D7415 /* MyLocationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationStore.swift; sourceTree = "<group>"; };
+		7D2724C3217732AF005D7415 /* MyLocationActioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationActioner.swift; sourceTree = "<group>"; };
 		7D514F73B47EF77CDE15DE32 /* Pods_Prueba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prueba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceConfigurator.swift; sourceTree = "<group>"; };
 		7DB784FC21764FC900984288 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -163,6 +171,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2724B8217717C8005D7415 /* GoogleMapsViewConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				7DB7850E21769BC000984288 /* GoogleMapViewConfigurator.swift */,
+				7DB7851A2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift */,
+				7DB7851C2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift */,
+			);
+			path = GoogleMapsViewConfigurator;
+			sourceTree = "<group>";
+		};
+		7D2724BC21772DEC005D7415 /* MyLocation */ = {
+			isa = PBXGroup;
+			children = (
+				7D2724BD21772E12005D7415 /* MyLocationViewController.swift */,
+				7D2724BF21772E8E005D7415 /* MyLocationMapConfigurator.swift */,
+				7D2724C121772F6E005D7415 /* MyLocationStore.swift */,
+				7D2724C3217732AF005D7415 /* MyLocationActioner.swift */,
+			);
+			path = MyLocation;
+			sourceTree = "<group>";
+		};
+		7D2724C5217797B0005D7415 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD7F01217379090010218A /* API Client */,
+				7DBD7F1C2174241D0010218A /* SecureStorage */,
+				7DBD7F242174C1D20010218A /* UserConfigurationStorage */,
+				7DB784F9217645BE00984288 /* Location */,
+				7DB785082176931C00984288 /* Maps */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		7DB784F9217645BE00984288 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,10 +247,8 @@
 		7DB7850B2176937000984288 /* GoogleMapsImplementation */ = {
 			isa = PBXGroup;
 			children = (
+				7D2724B8217717C8005D7415 /* GoogleMapsViewConfigurator */,
 				7DB7850C2176944F00984288 /* GoogleMapsConfigurator.swift */,
-				7DB7850E21769BC000984288 /* GoogleMapViewConfigurator.swift */,
-				7DB7851A2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift */,
-				7DB7851C2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift */,
 			);
 			path = GoogleMapsImplementation;
 			sourceTree = "<group>";
@@ -237,15 +276,11 @@
 		7DBD7EE02172A5410010218A /* Prueba */ = {
 			isa = PBXGroup;
 			children = (
-				7DB785082176931C00984288 /* Maps */,
+				7D2724C5217797B0005D7415 /* Dependencies */,
 				7DBD7F402175329B0010218A /* AppConfiguration */,
 				7DBD7F0B2173D30B0010218A /* Services */,
 				7DBD7F1921741B780010218A /* Models */,
 				7DBD7F37217520DC0010218A /* Utils */,
-				7DB784F9217645BE00984288 /* Location */,
-				7DBD7F242174C1D20010218A /* UserConfigurationStorage */,
-				7DBD7F1C2174241D0010218A /* SecureStorage */,
-				7DBD7F01217379090010218A /* API Client */,
 				7DBD7F4121753C700010218A /* Scenes */,
 				7DBD7EE12172A5410010218A /* AppDelegate.swift */,
 				7DBD7EE52172A5410010218A /* Main.storyboard */,
@@ -378,6 +413,7 @@
 		7DBD7F4121753C700010218A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7D2724BC21772DEC005D7415 /* MyLocation */,
 				7DB785072176889F00984288 /* RestaurantsMap */,
 				7DBD7F4421753CF90010218A /* RestaurantList */,
 			);
@@ -628,6 +664,7 @@
 				7DBD7F3B2175244A0010218A /* RestaurantService.swift in Sources */,
 				7DBD7F2F2174EA9C0010218A /* TokenStorageFactory.swift in Sources */,
 				7DBD7F2D2174EA600010218A /* SecureStringStorage.swift in Sources */,
+				7D2724C021772E8E005D7415 /* MyLocationMapConfigurator.swift in Sources */,
 				7D099CC721759D3300C903FE /* RestaurantListLoader.swift in Sources */,
 				7D099CCB2175BCD900C903FE /* AlamoRequestAdapter.swift in Sources */,
 				7DBD7F0D2173D6820010218A /* RequestConfiguration.swift in Sources */,
@@ -637,6 +674,7 @@
 				7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */,
 				7DBD7F1B21741B980010218A /* Token.swift in Sources */,
 				7DBD7F06217398350010218A /* AlamoRequestConvertible.swift in Sources */,
+				7D2724BE21772E12005D7415 /* MyLocationViewController.swift in Sources */,
 				7DBD7F082173B9870010218A /* AlamoRequester.swift in Sources */,
 				7DB78502217651E500984288 /* Localizator.swift in Sources */,
 				7DBD7F4321753CF10010218A /* RestaurantListViewController.swift in Sources */,
@@ -660,7 +698,9 @@
 				7DBD7EE22172A5410010218A /* AppDelegate.swift in Sources */,
 				7DBD7F202174253D0010218A /* KeychainAccess.swift in Sources */,
 				7D099CCF2175D90000C903FE /* AuthAdapter.swift in Sources */,
+				7D2724C221772F6E005D7415 /* MyLocationStore.swift in Sources */,
 				7DB785212176ECCB00984288 /* RestaurantsMapFetcher.swift in Sources */,
+				7D2724C4217732AF005D7415 /* MyLocationActioner.swift in Sources */,
 				7DB785042176591900984288 /* LocalizatorFactory.swift in Sources */,
 				7DB7851B2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift in Sources */,
 			);
