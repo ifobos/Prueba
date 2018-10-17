@@ -65,5 +65,13 @@ class GoogleMapViewConfigurator: NSObject, MapViewConfiguratorProtocol {
     func didChangePosition(_ block: @escaping (GeoPoint) -> Void) {
         self.didChangePosition = block
     }
+    
+    func selectedLocation() -> GeoPoint? {
+        guard let position = pickerMarker?.position else {
+            return nil
+        }
+        return GeoPoint(latitude: position.latitude,
+                        longitude: position.longitude)
+    }
 
 }
