@@ -13,4 +13,5 @@ protocol MapViewConfiguratorProtocol {
     func setup(in view: UIView, location: GeoPoint, pickerEnable: Bool)
     func loadRestaurants(_ restaurants: [Restaurant]?)
     func didChangePosition(_ block: @escaping (GeoPoint) -> Void)
+    func selectedLocation() -> GeoPoint?
 }
