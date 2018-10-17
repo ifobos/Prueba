@@ -11,7 +11,8 @@ import UIKit
 class MyLocationViewController: UIViewController {
     @IBOutlet var map: MyLocationMapConfigurator?
     @IBOutlet var store: MyLocationStore?
-
+    @IBOutlet var actioner: MyLocationActioner?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         map?.setup()

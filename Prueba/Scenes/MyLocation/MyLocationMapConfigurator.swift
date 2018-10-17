@@ -23,5 +23,4 @@ class MyLocationMapConfigurator: NSObject {
         configurator.setup(in: mapContainer, location: location, pickerEnable: true)
     }
     
-
 }

@@ -32,8 +32,13 @@ class RestaurantListViewController: UIViewController {
         } else if segue.identifier == Constant.goToMyLocation,
             let destination = segue.destination as? MyLocationViewController,
             let destinationStore = destination.store,
-            let sourceStore = store {
+            let sourceStore = store,
+            let destinationActioner = destination.actioner {
             destinationStore.myCurrentLocation = sourceStore.lastLocation
+            destinationActioner.saveAction = { [weak self] newLocation in
+                self?.store?.lastLocation = newLocation
+                self?.fetcher?.fetch()
+            }
         }
 
     }

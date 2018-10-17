@@ -10,9 +10,18 @@ import UIKit
 
 class MyLocationActioner: NSObject {
 
+    var saveAction: ((GeoPoint) -> Void)?
     @IBOutlet weak var viewController: MyLocationViewController?
+    @IBOutlet weak var map: MyLocationMapConfigurator?
     
     @IBAction func closeAction(_ sender: Any) {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveAction(_ sender: Any) {
+        if let selectedLocation = map?.configurator.selectedLocation() {
+            saveAction?(selectedLocation)
+        }
         viewController?.dismiss(animated: true, completion: nil)
     }
 }

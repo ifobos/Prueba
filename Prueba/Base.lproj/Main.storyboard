@@ -227,7 +227,11 @@
                                                 <action selector="closeAction:" destination="geu-Dy-2e1" id="cvd-cr-PGG"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="KVf-PI-cHi"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="KVf-PI-cHi">
+                                            <connections>
+                                                <action selector="saveAction:" destination="geu-Dy-2e1" id="cQy-Gx-XSK"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -249,6 +253,7 @@
                         <viewLayoutGuide key="safeArea" id="YbQ-rS-36a"/>
                     </view>
                     <connections>
+                        <outlet property="actioner" destination="geu-Dy-2e1" id="wRk-YO-zNf"/>
                         <outlet property="map" destination="bPB-5H-bK9" id="oub-4T-uS6"/>
                         <outlet property="store" destination="thD-jH-kq0" id="8cI-Af-L7Y"/>
                     </connections>
@@ -263,6 +268,7 @@
                 <customObject id="thD-jH-kq0" userLabel="Store" customClass="MyLocationStore" customModule="Prueba" customModuleProvider="target"/>
                 <customObject id="geu-Dy-2e1" userLabel="Actioner" customClass="MyLocationActioner" customModule="Prueba" customModuleProvider="target">
                     <connections>
+                        <outlet property="map" destination="bPB-5H-bK9" id="Vcd-P3-lnj"/>
                         <outlet property="viewController" destination="f8P-9N-0XY" id="8fk-qM-EKI"/>
                     </connections>
                 </customObject>
