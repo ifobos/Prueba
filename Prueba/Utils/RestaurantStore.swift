@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RestaurantListStore: NSObject {
+class RestaurantStore: NSObject {
     
-    var lastLocationCoordinate: LocationCoordinate? {
+    var lastLocation: GeoPoint? {
         willSet {
-            if newValue == lastLocationCoordinate {
+            if newValue == lastLocation {
                 return
             }
             restaurants.removeAll()
