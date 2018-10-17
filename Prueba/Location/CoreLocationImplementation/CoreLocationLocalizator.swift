@@ -17,7 +17,7 @@ extension LocalizatorFactory {
 
 class CoreLocationLocalizator: NSObject, LocalizatorProtocol {
     
-    var currentLocation: LocationCoordinate? {
+    var currentLocation: GeoPoint? {
         didSet {
             guard let `currentLocation` = currentLocation else {
                 return
@@ -31,7 +31,7 @@ class CoreLocationLocalizator: NSObject, LocalizatorProtocol {
     
     var locationManager: CLLocationManager
     
-    var pendingCompletions: [(LocationCoordinate) -> Void] = []
+    var pendingCompletions: [(GeoPoint) -> Void] = []
     
     override init() {
         locationManager = CLLocationManager()
@@ -42,7 +42,7 @@ class CoreLocationLocalizator: NSObject, LocalizatorProtocol {
         locationManager.delegate = self
     }
     
-    func currentLocation(completion: @escaping (LocationCoordinate) -> Void) {
+    func currentLocation(completion: @escaping (GeoPoint) -> Void) {
         if let `currentLocation` = currentLocation {
             completion(currentLocation)
         } else {
@@ -58,6 +58,6 @@ extension CoreLocationLocalizator: CLLocationManagerDelegate {
         guard let coordinate = locations.last?.coordinate else {
             return
         }
-        currentLocation = LocationCoordinate(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        currentLocation = GeoPoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
 }

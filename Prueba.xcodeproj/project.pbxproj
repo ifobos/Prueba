@@ -13,12 +13,24 @@
 		7D099CCB2175BCD900C903FE /* AlamoRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D099CCA2175BCD900C903FE /* AlamoRequestAdapter.swift */; };
 		7D099CCD2175D49A00C903FE /* AuthRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D099CCC2175D49A00C903FE /* AuthRetrier.swift */; };
 		7D099CCF2175D90000C903FE /* AuthAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D099CCE2175D90000C903FE /* AuthAdapter.swift */; };
+		7D2724B72176FA13005D7415 /* AbstractRestaurantsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724B62176FA13005D7415 /* AbstractRestaurantsFetcher.swift */; };
 		7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */; };
 		7DB784FD21764FC900984288 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB784FC21764FC900984288 /* CoreLocation.framework */; };
 		7DB784FF21764FF000984288 /* CoreLocationLocalizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */; };
 		7DB78502217651E500984288 /* Localizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB78501217651E500984288 /* Localizator.swift */; };
 		7DB785042176591900984288 /* LocalizatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB785032176591900984288 /* LocalizatorFactory.swift */; };
-		7DB7850621765D7600984288 /* LocationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7850521765D7600984288 /* LocationCoordinate.swift */; };
+		7DB7850621765D7600984288 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7850521765D7600984288 /* GeoPoint.swift */; };
+		7DB7850A2176935A00984288 /* MapsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB785092176935A00984288 /* MapsConfigurator.swift */; };
+		7DB7850D2176944F00984288 /* GoogleMapsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7850C2176944F00984288 /* GoogleMapsConfigurator.swift */; };
+		7DB7850F21769BC000984288 /* GoogleMapViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7850E21769BC000984288 /* GoogleMapViewConfigurator.swift */; };
+		7DB7851121769E1200984288 /* MapViewConfiguratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7851021769E1200984288 /* MapViewConfiguratorFactory.swift */; };
+		7DB7851321769FFC00984288 /* MapViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7851221769FFC00984288 /* MapViewConfigurator.swift */; };
+		7DB785152176A28D00984288 /* RestaurantsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB785142176A28D00984288 /* RestaurantsMapViewController.swift */; };
+		7DB785172176A31200984288 /* RestaurantsMapActioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB785162176A31200984288 /* RestaurantsMapActioner.swift */; };
+		7DB7851B2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7851A2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift */; };
+		7DB7851D2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB7851C2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift */; };
+		7DB785212176ECCB00984288 /* RestaurantsMapFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB785202176ECCB00984288 /* RestaurantsMapFetcher.swift */; };
+		7DB785232176F25F00984288 /* RestaurantsMapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB785222176F25F00984288 /* RestaurantsMapConfigurator.swift */; };
 		7DBD7EE22172A5410010218A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7EE12172A5410010218A /* AppDelegate.swift */; };
 		7DBD7EE72172A5410010218A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD7EE52172A5410010218A /* Main.storyboard */; };
 		7DBD7EE92172A5420010218A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD7EE82172A5420010218A /* Assets.xcassets */; };
@@ -48,7 +60,7 @@
 		7DBD7F4321753CF10010218A /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F4221753CF10010218A /* RestaurantListViewController.swift */; };
 		7DBD7F4621753E7C0010218A /* RestaurantListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F4521753E7C0010218A /* RestaurantListDataSource.swift */; };
 		7DBD7F4A2175521F0010218A /* RestaurantListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F492175521F0010218A /* RestaurantListDelegate.swift */; };
-		7DBD7F4C217552FD0010218A /* RestaurantListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F4B217552FD0010218A /* RestaurantListStore.swift */; };
+		7DBD7F4C217552FD0010218A /* RestaurantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F4B217552FD0010218A /* RestaurantStore.swift */; };
 		7DBD7F4E2175590E0010218A /* RestaurantListFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F4D2175590E0010218A /* RestaurantListFetcher.swift */; };
 		B554BF3C2B4E31E0804F4CC2 /* Pods_PruebaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20FD7AB14491520F8196EAC /* Pods_PruebaTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,13 +82,25 @@
 		7D099CCA2175BCD900C903FE /* AlamoRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoRequestAdapter.swift; sourceTree = "<group>"; };
 		7D099CCC2175D49A00C903FE /* AuthRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRetrier.swift; sourceTree = "<group>"; };
 		7D099CCE2175D90000C903FE /* AuthAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAdapter.swift; sourceTree = "<group>"; };
+		7D2724B62176FA13005D7415 /* AbstractRestaurantsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRestaurantsFetcher.swift; sourceTree = "<group>"; };
 		7D514F73B47EF77CDE15DE32 /* Pods_Prueba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prueba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceConfigurator.swift; sourceTree = "<group>"; };
 		7DB784FC21764FC900984288 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationLocalizator.swift; sourceTree = "<group>"; };
 		7DB78501217651E500984288 /* Localizator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizator.swift; sourceTree = "<group>"; };
 		7DB785032176591900984288 /* LocalizatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizatorFactory.swift; sourceTree = "<group>"; };
-		7DB7850521765D7600984288 /* LocationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinate.swift; sourceTree = "<group>"; };
+		7DB7850521765D7600984288 /* GeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
+		7DB785092176935A00984288 /* MapsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsConfigurator.swift; sourceTree = "<group>"; };
+		7DB7850C2176944F00984288 /* GoogleMapsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsConfigurator.swift; sourceTree = "<group>"; };
+		7DB7850E21769BC000984288 /* GoogleMapViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewConfigurator.swift; sourceTree = "<group>"; };
+		7DB7851021769E1200984288 /* MapViewConfiguratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewConfiguratorFactory.swift; sourceTree = "<group>"; };
+		7DB7851221769FFC00984288 /* MapViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewConfigurator.swift; sourceTree = "<group>"; };
+		7DB785142176A28D00984288 /* RestaurantsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsMapViewController.swift; sourceTree = "<group>"; };
+		7DB785162176A31200984288 /* RestaurantsMapActioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsMapActioner.swift; sourceTree = "<group>"; };
+		7DB7851A2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleMapViewConfigurator+Utils.swift"; sourceTree = "<group>"; };
+		7DB7851C2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleMapViewConfigurator+MapViewDelegate.swift"; sourceTree = "<group>"; };
+		7DB785202176ECCB00984288 /* RestaurantsMapFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsMapFetcher.swift; sourceTree = "<group>"; };
+		7DB785222176F25F00984288 /* RestaurantsMapConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsMapConfigurator.swift; sourceTree = "<group>"; };
 		7DBD7EDE2172A5410010218A /* Prueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBD7EE12172A5410010218A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DBD7EE62172A5410010218A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,7 +134,7 @@
 		7DBD7F4221753CF10010218A /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
 		7DBD7F4521753E7C0010218A /* RestaurantListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListDataSource.swift; sourceTree = "<group>"; };
 		7DBD7F492175521F0010218A /* RestaurantListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListDelegate.swift; sourceTree = "<group>"; };
-		7DBD7F4B217552FD0010218A /* RestaurantListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListStore.swift; sourceTree = "<group>"; };
+		7DBD7F4B217552FD0010218A /* RestaurantStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantStore.swift; sourceTree = "<group>"; };
 		7DBD7F4D2175590E0010218A /* RestaurantListFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListFetcher.swift; sourceTree = "<group>"; };
 		8F693F59B6D23F736351DEB5 /* Pods-PruebaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PruebaTests/Pods-PruebaTests.release.xcconfig"; sourceTree = "<group>"; };
 		922FAA465DBA68F23A0C1545 /* Pods-PruebaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PruebaTests/Pods-PruebaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +181,39 @@
 			path = CoreLocationImplementation;
 			sourceTree = "<group>";
 		};
+		7DB785072176889F00984288 /* RestaurantsMap */ = {
+			isa = PBXGroup;
+			children = (
+				7DB785142176A28D00984288 /* RestaurantsMapViewController.swift */,
+				7DB785162176A31200984288 /* RestaurantsMapActioner.swift */,
+				7DB785222176F25F00984288 /* RestaurantsMapConfigurator.swift */,
+				7DB785202176ECCB00984288 /* RestaurantsMapFetcher.swift */,
+			);
+			path = RestaurantsMap;
+			sourceTree = "<group>";
+		};
+		7DB785082176931C00984288 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				7DB785092176935A00984288 /* MapsConfigurator.swift */,
+				7DB7851221769FFC00984288 /* MapViewConfigurator.swift */,
+				7DB7851021769E1200984288 /* MapViewConfiguratorFactory.swift */,
+				7DB7850B2176937000984288 /* GoogleMapsImplementation */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		7DB7850B2176937000984288 /* GoogleMapsImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				7DB7850C2176944F00984288 /* GoogleMapsConfigurator.swift */,
+				7DB7850E21769BC000984288 /* GoogleMapViewConfigurator.swift */,
+				7DB7851A2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift */,
+				7DB7851C2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift */,
+			);
+			path = GoogleMapsImplementation;
+			sourceTree = "<group>";
+		};
 		7DBD7ED52172A5400010218A = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +237,7 @@
 		7DBD7EE02172A5410010218A /* Prueba */ = {
 			isa = PBXGroup;
 			children = (
+				7DB785082176931C00984288 /* Maps */,
 				7DBD7F402175329B0010218A /* AppConfiguration */,
 				7DBD7F0B2173D30B0010218A /* Services */,
 				7DBD7F1921741B780010218A /* Models */,
@@ -257,7 +315,7 @@
 				7DBD7F1A21741B980010218A /* Token.swift */,
 				7DBD7F3521751D840010218A /* Restaurant.swift */,
 				7DBD7F3C2175296B0010218A /* RestaurantSearchResult.swift */,
-				7DB7850521765D7600984288 /* LocationCoordinate.swift */,
+				7DB7850521765D7600984288 /* GeoPoint.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,7 +359,9 @@
 		7DBD7F37217520DC0010218A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7DBD7F4B217552FD0010218A /* RestaurantStore.swift */,
 				7DBD7F3E21752DB60010218A /* Pagination.swift */,
+				7D2724B62176FA13005D7415 /* AbstractRestaurantsFetcher.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -318,6 +378,7 @@
 		7DBD7F4121753C700010218A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7DB785072176889F00984288 /* RestaurantsMap */,
 				7DBD7F4421753CF90010218A /* RestaurantList */,
 			);
 			path = Scenes;
@@ -329,7 +390,6 @@
 				7DBD7F4221753CF10010218A /* RestaurantListViewController.swift */,
 				7DBD7F4521753E7C0010218A /* RestaurantListDataSource.swift */,
 				7DBD7F492175521F0010218A /* RestaurantListDelegate.swift */,
-				7DBD7F4B217552FD0010218A /* RestaurantListStore.swift */,
 				7DBD7F4D2175590E0010218A /* RestaurantListFetcher.swift */,
 				7D099CC621759D3300C903FE /* RestaurantListLoader.swift */,
 			);
@@ -370,6 +430,7 @@
 				7DBD7EDC2172A5410010218A /* Resources */,
 				801B77535A9EAA6B0D1C89E5 /* [CP] Embed Pods Frameworks */,
 				7DBD7F322174FBBD0010218A /* Swiftlint */,
+				EE018AAD8DECBC4275F5CAF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -481,13 +542,9 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = Swiftlint;
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +569,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Prueba/Pods-Prueba-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE018AAD8DECBC4275F5CAF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Prueba/Pods-Prueba-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Prueba/Pods-Prueba-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE700E0266A65789C0045C84 /* [CP] Check Pods Manifest.lock */ = {
@@ -542,8 +617,12 @@
 				7D099CCD2175D49A00C903FE /* AuthRetrier.swift in Sources */,
 				7DBD7F3621751D840010218A /* Restaurant.swift in Sources */,
 				7DBD7F18217413210010218A /* TokenRequestConfiguration.swift in Sources */,
-				7DBD7F4C217552FD0010218A /* RestaurantListStore.swift in Sources */,
+				7DB7850F21769BC000984288 /* GoogleMapViewConfigurator.swift in Sources */,
+				7DB7850A2176935A00984288 /* MapsConfigurator.swift in Sources */,
+				7DBD7F4C217552FD0010218A /* RestaurantStore.swift in Sources */,
 				7DBD7F132173DAAA0010218A /* TokenService.swift in Sources */,
+				7DB785232176F25F00984288 /* RestaurantsMapConfigurator.swift in Sources */,
+				7DB785152176A28D00984288 /* RestaurantsMapViewController.swift in Sources */,
 				7DBD7F4A2175521F0010218A /* RestaurantListDelegate.swift in Sources */,
 				7DBD7F2B2174E99A0010218A /* ConfigurationStorageFactory.swift in Sources */,
 				7DBD7F3B2175244A0010218A /* RestaurantService.swift in Sources */,
@@ -554,20 +633,26 @@
 				7DBD7F0D2173D6820010218A /* RequestConfiguration.swift in Sources */,
 				7D099CC92175AB6800C903FE /* AlamoRequestRetrier.swift in Sources */,
 				7DBD7F2321744E820010218A /* Requester.swift in Sources */,
+				7D2724B72176FA13005D7415 /* AbstractRestaurantsFetcher.swift in Sources */,
 				7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */,
 				7DBD7F1B21741B980010218A /* Token.swift in Sources */,
 				7DBD7F06217398350010218A /* AlamoRequestConvertible.swift in Sources */,
 				7DBD7F082173B9870010218A /* AlamoRequester.swift in Sources */,
 				7DB78502217651E500984288 /* Localizator.swift in Sources */,
 				7DBD7F4321753CF10010218A /* RestaurantListViewController.swift in Sources */,
+				7DB7851121769E1200984288 /* MapViewConfiguratorFactory.swift in Sources */,
 				7DBD7F4E2175590E0010218A /* RestaurantListFetcher.swift in Sources */,
+				7DB785172176A31200984288 /* RestaurantsMapActioner.swift in Sources */,
 				7DBD7F312174EBCC0010218A /* RequesterFactory.swift in Sources */,
 				7DBD7F282174C9C20010218A /* UserConfiguration.swift in Sources */,
 				7DBD7F3F21752DB60010218A /* Pagination.swift in Sources */,
 				7DBD7F03217379290010218A /* Request.swift in Sources */,
-				7DB7850621765D7600984288 /* LocationCoordinate.swift in Sources */,
+				7DB7850621765D7600984288 /* GeoPoint.swift in Sources */,
+				7DB7850D2176944F00984288 /* GoogleMapsConfigurator.swift in Sources */,
 				7DBD7F34217508700010218A /* SearchRestaurantsRequestConfiguration.swift in Sources */,
+				7DB7851321769FFC00984288 /* MapViewConfigurator.swift in Sources */,
 				7DBD7F4621753E7C0010218A /* RestaurantListDataSource.swift in Sources */,
+				7DB7851D2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift in Sources */,
 				7DBD7F262174C2160010218A /* UserDefaults.swift in Sources */,
 				7DB784FF21764FF000984288 /* CoreLocationLocalizator.swift in Sources */,
 				7DBD7F0F2173D6BE0010218A /* AppConfiguration.swift in Sources */,
@@ -575,7 +660,9 @@
 				7DBD7EE22172A5410010218A /* AppDelegate.swift in Sources */,
 				7DBD7F202174253D0010218A /* KeychainAccess.swift in Sources */,
 				7D099CCF2175D90000C903FE /* AuthAdapter.swift in Sources */,
+				7DB785212176ECCB00984288 /* RestaurantsMapFetcher.swift in Sources */,
 				7DB785042176591900984288 /* LocalizatorFactory.swift in Sources */,
+				7DB7851B2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

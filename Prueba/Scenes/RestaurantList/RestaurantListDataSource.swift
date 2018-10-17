@@ -14,7 +14,7 @@ class RestaurantListDataSource: NSObject, UITableViewDataSource {
     }
     
     // MARK: - Dependencies
-    @IBOutlet weak var store: RestaurantListStore?
+    @IBOutlet weak var store: RestaurantStore?
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

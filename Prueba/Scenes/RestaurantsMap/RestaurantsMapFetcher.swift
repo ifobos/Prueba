@@ -1,23 +1,24 @@
 //
-//  RestaurantListFetcher.swift
+//  RestaurantsMapFetcher.swift
 //  Prueba
 //
-//  Created by Juan Carlos Garcia Alfaro on 10/15/18.
+//  Created by Juan Carlos Garcia Alfaro on 10/16/18.
 //  Copyright © 2018 Juan Carlos Garcia Alfaro. All rights reserved.
 //
 
 import UIKit
 
-class RestaurantListFetcher: NSObject, RestaurantsFetcherProtocol {
+class RestaurantsMapFetcher: NSObject, RestaurantsFetcherProtocol {
+
     var isFetching = false {
         didSet {
             updateActivityIndicator()
         }
     }
-  
+    
     // MARK: - Dependencies
+    @IBOutlet weak var map: RestaurantsMapConfigurator?
     @IBOutlet weak var store: RestaurantStore?
-    @IBOutlet weak var loader: RestaurantListLoader?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
     var restaurantService: RestaurantServiceProtocol = RestaurantService()
     var localizator: LocalizatorProtocol = LocalizatorFactory.newLocalizator()
@@ -25,7 +26,6 @@ class RestaurantListFetcher: NSObject, RestaurantsFetcherProtocol {
     // MARK: - Fetch handling
     
     func fetchCompletion() {
-        loader?.reload()
+        map?.configurator.loadRestaurants(store?.restaurants)
     }
-
 }

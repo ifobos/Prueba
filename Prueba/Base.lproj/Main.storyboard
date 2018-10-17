@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tcm-qi-lcE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dcX-mu-wjd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,22 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="jkX-7p-QIO">
-            <objects>
-                <navigationController id="tcm-qi-lcE" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hkb-go-tnx">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="dcX-mu-wjd" kind="relationship" relationship="rootViewController" id="j4x-rj-07E"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RBX-gc-Y6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1545" y="102"/>
-        </scene>
         <!--Restaurant List View Controller-->
         <scene sceneID="XYc-1L-bul">
             <objects>
@@ -34,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GLD-jS-scq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="UaQ-ws-Gox">
                                     <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hvx-qv-GFN">
-                                            <rect key="frame" x="177.5" y="12" width="20" height="20"/>
+                                            <rect key="frame" x="290" y="12" width="20" height="20"/>
                                         </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,19 +65,35 @@
                                     <outlet property="delegate" destination="Ukb-ee-WUN" id="mFu-n9-qNb"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmD-YP-anB">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="My Location" id="oC9-Su-h0h"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eyt-KQ-UPo"/>
+                                    <barButtonItem title="Show in Map" id="OgO-WI-M0g">
+                                        <connections>
+                                            <segue destination="WMO-wQ-VuH" kind="show" identifier="goToRestaurantsMap" id="XSe-hn-3Za"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="meZ-QQ-3Ii" firstAttribute="bottom" secondItem="GLD-jS-scq" secondAttribute="bottom" id="DbP-hW-R4q"/>
+                            <constraint firstItem="gmD-YP-anB" firstAttribute="top" secondItem="GLD-jS-scq" secondAttribute="bottom" id="30B-S4-tmM"/>
+                            <constraint firstItem="gmD-YP-anB" firstAttribute="leading" secondItem="meZ-QQ-3Ii" secondAttribute="leading" id="BAP-KT-elt"/>
                             <constraint firstItem="meZ-QQ-3Ii" firstAttribute="trailing" secondItem="GLD-jS-scq" secondAttribute="trailing" id="HHB-El-Tac"/>
                             <constraint firstItem="GLD-jS-scq" firstAttribute="leading" secondItem="meZ-QQ-3Ii" secondAttribute="leading" id="RSL-MB-4ko"/>
+                            <constraint firstItem="gmD-YP-anB" firstAttribute="trailing" secondItem="meZ-QQ-3Ii" secondAttribute="trailing" id="TdX-3q-1HL"/>
                             <constraint firstItem="GLD-jS-scq" firstAttribute="top" secondItem="meZ-QQ-3Ii" secondAttribute="top" id="f95-9V-dCm"/>
+                            <constraint firstItem="gmD-YP-anB" firstAttribute="bottom" secondItem="meZ-QQ-3Ii" secondAttribute="bottom" id="nhA-07-F42"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="meZ-QQ-3Ii"/>
                     </view>
                     <navigationItem key="navigationItem" id="AJS-PQ-R0H"/>
                     <connections>
                         <outlet property="fetcher" destination="Exr-IP-Enw" id="6eO-Fa-Kwj"/>
+                        <outlet property="store" destination="8qT-nf-txR" id="n4m-Vv-Pj8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgw-Bj-yTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -108,7 +108,7 @@
                         <outlet property="store" destination="8qT-nf-txR" id="hfT-y3-5UK"/>
                     </connections>
                 </customObject>
-                <customObject id="8qT-nf-txR" customClass="RestaurantListStore" customModule="Prueba" customModuleProvider="target"/>
+                <customObject id="8qT-nf-txR" customClass="RestaurantStore" customModule="Prueba" customModuleProvider="target"/>
                 <customObject id="Exr-IP-Enw" customClass="RestaurantListFetcher" customModule="Prueba" customModuleProvider="target">
                     <connections>
                         <outlet property="activityIndicator" destination="Hvx-qv-GFN" id="k9N-g3-K7S"/>
@@ -122,7 +122,90 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="-634" y="100"/>
+            <point key="canvasLocation" x="-634.39999999999998" y="99.400299850074973"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QDr-SQ-Wtj">
+            <objects>
+                <viewController id="WMO-wQ-VuH" customClass="RestaurantsMapViewController" customModule="Prueba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RjZ-FT-7Mn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAn-1N-B3H">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJB-Rb-00j">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                        <items>
+                                            <navigationItem id="ThB-2N-yfY">
+                                                <barButtonItem key="leftBarButtonItem" title="Close" id="kEx-ar-g08">
+                                                    <connections>
+                                                        <action selector="closeAction:" destination="0bF-gW-Phf" id="hMa-sF-LfQ"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FTq-wC-vb2">
+                                        <rect key="frame" x="335" y="32" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="1Rg-FL-gEi"/>
+                                    <constraint firstAttribute="trailing" secondItem="FTq-wC-vb2" secondAttribute="trailing" constant="20" symbolic="YES" id="NJh-Bh-QFR"/>
+                                    <constraint firstAttribute="trailing" secondItem="GJB-Rb-00j" secondAttribute="trailing" id="NcJ-sL-ghW"/>
+                                    <constraint firstItem="GJB-Rb-00j" firstAttribute="leading" secondItem="oAn-1N-B3H" secondAttribute="leading" id="UBG-Rg-3a7"/>
+                                    <constraint firstAttribute="bottom" secondItem="GJB-Rb-00j" secondAttribute="bottom" id="WeH-Cx-U5i"/>
+                                    <constraint firstItem="FTq-wC-vb2" firstAttribute="centerY" secondItem="GJB-Rb-00j" secondAttribute="centerY" id="nBD-Fh-bDH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCk-gq-192">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oAn-1N-B3H" firstAttribute="leading" secondItem="Xns-Hi-Ovp" secondAttribute="leading" id="AuD-ZY-RHR"/>
+                            <constraint firstItem="aCk-gq-192" firstAttribute="top" secondItem="oAn-1N-B3H" secondAttribute="bottom" id="GQJ-o3-hWP"/>
+                            <constraint firstItem="aCk-gq-192" firstAttribute="leading" secondItem="Xns-Hi-Ovp" secondAttribute="leading" id="WEA-ba-cqS"/>
+                            <constraint firstItem="Xns-Hi-Ovp" firstAttribute="bottom" secondItem="aCk-gq-192" secondAttribute="bottom" id="amG-Fy-6NB"/>
+                            <constraint firstItem="Xns-Hi-Ovp" firstAttribute="trailing" secondItem="aCk-gq-192" secondAttribute="trailing" id="hfb-VT-pqP"/>
+                            <constraint firstItem="oAn-1N-B3H" firstAttribute="top" secondItem="RjZ-FT-7Mn" secondAttribute="top" id="iQi-ya-VNq"/>
+                            <constraint firstItem="oAn-1N-B3H" firstAttribute="trailing" secondItem="Xns-Hi-Ovp" secondAttribute="trailing" id="jHd-wa-rl0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xns-Hi-Ovp"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="uzE-D2-Wai" id="UC4-pW-OVb"/>
+                        <outlet property="store" destination="lIw-Kz-P3L" id="EAB-qW-hZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3YR-1A-92P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="0bF-gW-Phf" userLabel="Actioner" customClass="RestaurantsMapActioner" customModule="Prueba" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="WMO-wQ-VuH" id="n86-9u-FB4"/>
+                    </connections>
+                </customObject>
+                <customObject id="uzE-D2-Wai" userLabel="Map" customClass="RestaurantsMapConfigurator" customModule="Prueba" customModuleProvider="target">
+                    <connections>
+                        <outlet property="fetcher" destination="jTq-Ft-C2Z" id="q0K-fV-b24"/>
+                        <outlet property="mapContainer" destination="aCk-gq-192" id="aQZ-ya-1eg"/>
+                        <outlet property="store" destination="lIw-Kz-P3L" id="9Qx-TI-r96"/>
+                    </connections>
+                </customObject>
+                <customObject id="lIw-Kz-P3L" userLabel="Store" customClass="RestaurantStore" customModule="Prueba" customModuleProvider="target"/>
+                <customObject id="jTq-Ft-C2Z" userLabel="Fetcher" customClass="RestaurantsMapFetcher" customModule="Prueba" customModuleProvider="target">
+                    <connections>
+                        <outlet property="activityIndicator" destination="FTq-wC-vb2" id="3UD-cQ-KIF"/>
+                        <outlet property="map" destination="uzE-D2-Wai" id="4M9-MD-fzP"/>
+                        <outlet property="store" destination="lIw-Kz-P3L" id="6wN-eB-dLJ"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="224.80000000000001" y="97.601199400299862"/>
         </scene>
     </scenes>
 </document>
