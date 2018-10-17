@@ -18,6 +18,7 @@
 		7D2724C021772E8E005D7415 /* MyLocationMapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724BF21772E8E005D7415 /* MyLocationMapConfigurator.swift */; };
 		7D2724C221772F6E005D7415 /* MyLocationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724C121772F6E005D7415 /* MyLocationStore.swift */; };
 		7D2724C4217732AF005D7415 /* MyLocationActioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724C3217732AF005D7415 /* MyLocationActioner.swift */; };
+		7D2724C721779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724C621779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift */; };
 		7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */; };
 		7DB784FD21764FC900984288 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB784FC21764FC900984288 /* CoreLocation.framework */; };
 		7DB784FF21764FF000984288 /* CoreLocationLocalizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */; };
@@ -91,6 +92,7 @@
 		7D2724BF21772E8E005D7415 /* MyLocationMapConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationMapConfigurator.swift; sourceTree = "<group>"; };
 		7D2724C121772F6E005D7415 /* MyLocationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationStore.swift; sourceTree = "<group>"; };
 		7D2724C3217732AF005D7415 /* MyLocationActioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationActioner.swift; sourceTree = "<group>"; };
+		7D2724C621779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantListViewController+PrepareForSegues.swift"; sourceTree = "<group>"; };
 		7D514F73B47EF77CDE15DE32 /* Pods_Prueba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prueba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceConfigurator.swift; sourceTree = "<group>"; };
 		7DB784FC21764FC900984288 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -424,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				7DBD7F4221753CF10010218A /* RestaurantListViewController.swift */,
+				7D2724C621779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift */,
 				7DBD7F4521753E7C0010218A /* RestaurantListDataSource.swift */,
 				7DBD7F492175521F0010218A /* RestaurantListDelegate.swift */,
 				7DBD7F4D2175590E0010218A /* RestaurantListFetcher.swift */,
@@ -661,6 +664,7 @@
 				7DB785152176A28D00984288 /* RestaurantsMapViewController.swift in Sources */,
 				7DBD7F4A2175521F0010218A /* RestaurantListDelegate.swift in Sources */,
 				7DBD7F2B2174E99A0010218A /* ConfigurationStorageFactory.swift in Sources */,
+				7D2724C721779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift in Sources */,
 				7DBD7F3B2175244A0010218A /* RestaurantService.swift in Sources */,
 				7DBD7F2F2174EA9C0010218A /* TokenStorageFactory.swift in Sources */,
 				7DBD7F2D2174EA600010218A /* SecureStringStorage.swift in Sources */,
