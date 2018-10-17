@@ -163,6 +163,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2724B8217717C8005D7415 /* GoogleMapsViewConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				7DB7850E21769BC000984288 /* GoogleMapViewConfigurator.swift */,
+				7DB7851A2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift */,
+				7DB7851C2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift */,
+			);
+			path = GoogleMapsViewConfigurator;
+			sourceTree = "<group>";
+		};
 		7DB784F9217645BE00984288 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,10 +216,8 @@
 		7DB7850B2176937000984288 /* GoogleMapsImplementation */ = {
 			isa = PBXGroup;
 			children = (
+				7D2724B8217717C8005D7415 /* GoogleMapsViewConfigurator */,
 				7DB7850C2176944F00984288 /* GoogleMapsConfigurator.swift */,
-				7DB7850E21769BC000984288 /* GoogleMapViewConfigurator.swift */,
-				7DB7851A2176E8E300984288 /* GoogleMapViewConfigurator+Utils.swift */,
-				7DB7851C2176E93D00984288 /* GoogleMapViewConfigurator+MapViewDelegate.swift */,
 			);
 			path = GoogleMapsImplementation;
 			sourceTree = "<group>";

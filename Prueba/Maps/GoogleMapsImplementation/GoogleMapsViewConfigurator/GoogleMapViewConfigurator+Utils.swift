@@ -29,4 +29,13 @@ extension GoogleMapViewConfigurator {
         mapView.camera = camera
         defaultCamera = camera
     }
+    
+    func setupPickerMarker(with location: GeoPoint) {
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: location.latitude,
+                                                 longitude: location.longitude)
+        marker.icon = GMSMarker.markerImage(with: .blue)
+        marker.map = mapView
+        self.pickerMarker = marker
+    }
 }
