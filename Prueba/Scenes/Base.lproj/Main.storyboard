@@ -84,17 +84,26 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9o-ew-ibE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem id="Yg7-cL-xuf"/>
+                                    <navigationItem title="Restaurants" id="Yg7-cL-xuf"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFF-fX-edL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="F9o-ew-ibE" firstAttribute="trailing" secondItem="meZ-QQ-3Ii" secondAttribute="trailing" id="2Gb-S4-Vui"/>
+                            <constraint firstItem="GLD-jS-scq" firstAttribute="top" secondItem="fFF-fX-edL" secondAttribute="bottom" id="2s3-Ps-9ZE"/>
                             <constraint firstItem="gmD-YP-anB" firstAttribute="top" secondItem="GLD-jS-scq" secondAttribute="bottom" id="30B-S4-tmM"/>
                             <constraint firstItem="gmD-YP-anB" firstAttribute="leading" secondItem="meZ-QQ-3Ii" secondAttribute="leading" id="BAP-KT-elt"/>
                             <constraint firstItem="meZ-QQ-3Ii" firstAttribute="trailing" secondItem="GLD-jS-scq" secondAttribute="trailing" id="HHB-El-Tac"/>
+                            <constraint firstItem="meZ-QQ-3Ii" firstAttribute="trailing" secondItem="fFF-fX-edL" secondAttribute="trailing" id="PFW-S9-gWD"/>
                             <constraint firstItem="GLD-jS-scq" firstAttribute="leading" secondItem="meZ-QQ-3Ii" secondAttribute="leading" id="RSL-MB-4ko"/>
+                            <constraint firstItem="fFF-fX-edL" firstAttribute="leading" secondItem="meZ-QQ-3Ii" secondAttribute="leading" id="TW9-KA-vu5"/>
                             <constraint firstItem="gmD-YP-anB" firstAttribute="trailing" secondItem="meZ-QQ-3Ii" secondAttribute="trailing" id="TdX-3q-1HL"/>
                             <constraint firstItem="F9o-ew-ibE" firstAttribute="top" secondItem="meZ-QQ-3Ii" secondAttribute="top" id="Tf5-AR-WsS"/>
                             <constraint firstItem="GLD-jS-scq" firstAttribute="top" secondItem="F9o-ew-ibE" secondAttribute="bottom" id="gjM-hJ-Lnz"/>
@@ -131,7 +140,7 @@
                 </customObject>
                 <customObject id="ivj-UI-kbj" userLabel="Loader" customClass="RestaurantListLoader" customModule="Prueba" customModuleProvider="target">
                     <connections>
-                        <outlet property="navigationItem" destination="Yg7-cL-xuf" id="xmO-iH-q9B"/>
+                        <outlet property="currentLocationLabel" destination="fFF-fX-edL" id="d8j-9x-JPc"/>
                         <outlet property="store" destination="8qT-nf-txR" id="eDr-or-Dzw"/>
                         <outlet property="tableView" destination="GLD-jS-scq" id="x6t-35-nLh"/>
                     </connections>

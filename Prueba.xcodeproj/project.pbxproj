@@ -283,7 +283,6 @@
 				7DBD7F37217520DC0010218A /* Utils */,
 				7DBD7F4121753C700010218A /* Scenes */,
 				7DBD7EE12172A5410010218A /* AppDelegate.swift */,
-				7DBD7EE52172A5410010218A /* Main.storyboard */,
 				7DBD7EE82172A5420010218A /* Assets.xcassets */,
 				7DBD7EEA2172A5420010218A /* LaunchScreen.storyboard */,
 				7DBD7EED2172A5420010218A /* Info.plist */,
@@ -413,9 +412,10 @@
 		7DBD7F4121753C700010218A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				7D2724BC21772DEC005D7415 /* MyLocation */,
-				7DB785072176889F00984288 /* RestaurantsMap */,
+				7DBD7EE52172A5410010218A /* Main.storyboard */,
 				7DBD7F4421753CF90010218A /* RestaurantList */,
+				7DB785072176889F00984288 /* RestaurantsMap */,
+				7D2724BC21772DEC005D7415 /* MyLocation */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
