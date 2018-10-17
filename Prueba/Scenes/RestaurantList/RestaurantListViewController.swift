@@ -12,6 +12,7 @@ class RestaurantListViewController: UIViewController {
 
     private enum Constant {
         static let goToRestaurantsMap = "goToRestaurantsMap"
+        static let goToMyLocation = "goToMyLocation"
     }
     
     @IBOutlet var fetcher: RestaurantListFetcher?
@@ -28,7 +29,13 @@ class RestaurantListViewController: UIViewController {
             let destinationStore = destination.store,
             let sourceStore = store {
             destinationStore.lastLocation = sourceStore.lastLocation
+        } else if segue.identifier == Constant.goToMyLocation,
+            let destination = segue.destination as? MyLocationViewController,
+            let destinationStore = destination.store,
+            let sourceStore = store {
+            destinationStore.myCurrentLocation = sourceStore.lastLocation
         }
+
     }
     
 }
