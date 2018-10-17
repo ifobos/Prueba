@@ -13,10 +13,9 @@ extension GoogleMapViewConfigurator: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         if let `defaultCamera` = defaultCamera {
-            self.defaultCamera = nil
             mapView.camera = defaultCamera
+            self.defaultCamera = nil
         }
-        
         if let `pickerMarker` = pickerMarker {
             pickerMarker.position = CLLocationCoordinate2D(latitude: position.target.latitude,
                                                            longitude: position.target.longitude)
