@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RestaurantSearchResult: Decodable {
+struct RestaurantSearchResult: Codable {
     let total: Int?
     let data: [Restaurant]?
     let offset: Int?

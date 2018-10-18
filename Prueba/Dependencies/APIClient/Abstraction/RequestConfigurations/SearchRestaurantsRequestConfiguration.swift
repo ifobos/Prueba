@@ -24,7 +24,7 @@ struct SearchRestaurantsRequestConfiguration: RequestConfiguration {
         return .get
     }
     
-    var parameters: Parameters? {
+    var parameters: [String: Any]? {
         return ["point": "\(location.latitude),\(location.longitude)",
                 "country": country,
                 "max": pageSize,

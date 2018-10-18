@@ -1,5 +1,5 @@
 //
-//  ConfigurationStorageFactory.swift
+//  DefaultsStorageInstance.swift
 //  Prueba
 //
 //  Created by Juan Carlos Garcia Alfaro on 10/15/18.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol ConfigurationStorageFactoryProtocol {
-    static func newConfigurationStorage() -> ConfigurationStorageProtocol
+protocol DefaultsStorageInstanceProtocol {
+    static func instance() -> DefaultsStorageProtocol
 }
 
-enum ConfigurationStorageFactory: ConfigurationStorageFactoryProtocol {
+enum DefaultsStorageInstance: DefaultsStorageInstanceProtocol {
     // This factory has no implementation because it must be extended and implemented from the default dependency
 }

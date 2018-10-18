@@ -15,13 +15,13 @@ protocol RestaurantServiceProtocol {
 }
 
 class RestaurantService: RestaurantServiceProtocol {
-    
+
     // MARK: - Dependencies
     lazy var requester = RequesterFactory.newRequester()
-    lazy var decoder = JSONDecoder()
     lazy var tokenService: TokenServiceProtocol = TokenService()
     lazy var appConfiguration = AppConfiguration.shared
-    
+    lazy var decoder = JSONDecoder()
+
     // MARK: - Search handling
     func search(by location: GeoPoint,
                 pagination: PaginationProtocol,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SecureStringStorage {
+protocol SecureStringStorageProtocol {
     func get(_ key: String) throws -> String?
     func set(_ value: String, key: String) throws
     func remove(_ key: String) throws

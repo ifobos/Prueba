@@ -10,12 +10,12 @@ import Foundation
 import Alamofire
 
 extension RequesterFactory {
-    static func newRequester() -> Requester {
+    static func newRequester() -> RequesterProtocol {
         return AlamoRequester()
     }
 }
 
-class AlamoRequester: Requester {
+class AlamoRequester: RequesterProtocol {
     var authAdapter: RequestAdapter = AlamoRequestAdapter()
     var authRetrier: RequestRetrier = AlamoRequestRetrier()
     lazy var sessionManager = Alamofire.SessionManager.default

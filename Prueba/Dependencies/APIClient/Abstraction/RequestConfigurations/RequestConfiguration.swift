@@ -24,17 +24,15 @@ enum HeaderKey {
     static let authorization = "Authorization"
 }
 
-public typealias Parameters = [String: Any]
-
 protocol RequestConfiguration {
     var path: String { get }
     var method: HTTPMethod { get }
-    var parameters: Parameters? { get }
+    var parameters: [String: Any]? { get }
     var appAuthRequired: Bool { get }
 }
 
 extension RequestConfiguration {
-    var parameters: Parameters? {
+    var parameters: [String: Any]? {
         return nil
     }
     

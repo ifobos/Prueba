@@ -14,16 +14,15 @@ protocol TokenServiceConfiguratorProtocol {
 
 extension TokenService {
     enum Configurator: TokenServiceConfiguratorProtocol {
-        static var userConfigurations = UserConfigurations()
-        static var tokenStorage = TokenStorageFactory.newSecureStringStorage()
+        static var appFirstLaunchChecker: AppFirstLaunchCheckerProtocol = AppFirstLaunchChecker()
+        static var tokenStorage = SecureStringStorageFactory.newSecureStringStorage()
         
         static func setup() {
             // in case this is the first launch of a new
             // installation having deleted a previous installation
             // removes the token from the previous installation
-            if !userConfigurations.wasLaunchedBefore {
+            if !appFirstLaunchChecker.isFirstLaunch {
                 try? tokenStorage.remove(Constant.secureKey)
-                userConfigurations.wasLaunchedBefore = true
             }
         }
     }
