@@ -56,13 +56,3 @@ extension AppConfiguration {
         }
     }
 }
-
-extension AppConfiguration {
-    var clientId: String {
-        return "<<clientId>>"
-    }
-    
-    var clientSecret: String {
-        return "<<clientSecret>>"
-    }
-}
