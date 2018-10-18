@@ -16,27 +16,48 @@ protocol AppConfigurationProtocol {
     var defaultPageSize: Int { get }
 }
 
-class AppConfiguration: AppConfigurationProtocol {
+struct AppConfiguration: AppConfigurationProtocol, Decodable {
     
-    // TODO: JC - Load from Plist
-    
-    static let shared: AppConfigurationProtocol = AppConfiguration()
-    
-    private init() {
+    static let shared: AppConfigurationProtocol = AppConfiguration.defaultConfiguration()
+
+    static let configurationFileName = "AppConfiguration"
+    static let configurationFileType = "plist"
+
+    let defaultCountryId: Int
+    let defaultPageSize: Int
+    let baseURL: String
+}
+
+extension AppConfiguration {
+    private static func defaultConfiguration() -> AppConfiguration {
+        do {
+            let configuration = try loadFromConfigurationFile()
+            return configuration
+        } catch let error {
+            assertionFailure("\(error.localizedDescription)")
+            
+            return AppConfiguration(defaultCountryId: 0, defaultPageSize: 0, baseURL: "")
+        }
     }
     
-    var defaultCountryId: Int {
-        return 1
+    private static func loadFromConfigurationFile() throws -> AppConfiguration {
+        let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
+        let decoder = PropertyListDecoder()
+        let configuration = try decoder.decode(AppConfiguration.self, from: data)
+        return configuration
     }
     
-    var defaultPageSize: Int {
-        return 50
+    private static var filePath: String {
+        if let path = Bundle.main.path(forResource: configurationFileName, ofType: configurationFileType),
+            FileManager.default.fileExists(atPath: path) {
+            return path
+        } else {
+            return ""
+        }
     }
-    
-    var baseURL: String {
-        return "https://stg-api.pedidosya.com/public/v1/"
-    }
-    
+}
+
+extension AppConfiguration {
     var clientId: String {
         return "trivia_f"
     }

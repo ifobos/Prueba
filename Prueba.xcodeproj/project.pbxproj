@@ -26,6 +26,7 @@
 		7D2724EC2177FB95005D7415 /* TokenServiceRequesterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724EB2177FB95005D7415 /* TokenServiceRequesterMock.swift */; };
 		7D2724F02177FC94005D7415 /* RestaurantServiceRequesterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724EF2177FC94005D7415 /* RestaurantServiceRequesterMock.swift */; };
 		7D2724F22177FE6D005D7415 /* RestaurantServiceTokenServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724F12177FE6D005D7415 /* RestaurantServiceTokenServiceMock.swift */; };
+		7D2F5AEC217813D0005CE069 /* AppConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D2F5AEB217813D0005CE069 /* AppConfiguration.plist */; };
 		7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */; };
 		7DB784FD21764FC900984288 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB784FC21764FC900984288 /* CoreLocation.framework */; };
 		7DB784FF21764FF000984288 /* CoreLocationLocalizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */; };
@@ -112,6 +113,7 @@
 		7D2724EB2177FB95005D7415 /* TokenServiceRequesterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenServiceRequesterMock.swift; sourceTree = "<group>"; };
 		7D2724EF2177FC94005D7415 /* RestaurantServiceRequesterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantServiceRequesterMock.swift; sourceTree = "<group>"; };
 		7D2724F12177FE6D005D7415 /* RestaurantServiceTokenServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantServiceTokenServiceMock.swift; sourceTree = "<group>"; };
+		7D2F5AEB217813D0005CE069 /* AppConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppConfiguration.plist; sourceTree = "<group>"; };
 		7D514F73B47EF77CDE15DE32 /* Pods_Prueba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prueba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceConfigurator.swift; sourceTree = "<group>"; };
 		7DB784FC21764FC900984288 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -443,6 +445,7 @@
 				7DBD7EE82172A5420010218A /* Assets.xcassets */,
 				7DBD7EEA2172A5420010218A /* LaunchScreen.storyboard */,
 				7DBD7EED2172A5420010218A /* Info.plist */,
+				7D2F5AEB217813D0005CE069 /* AppConfiguration.plist */,
 			);
 			path = Prueba;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DBD7EEC2172A5420010218A /* LaunchScreen.storyboard in Resources */,
+				7D2F5AEC217813D0005CE069 /* AppConfiguration.plist in Resources */,
 				7DBD7EE92172A5420010218A /* Assets.xcassets in Resources */,
 				7DBD7EE72172A5410010218A /* Main.storyboard in Resources */,
 			);
