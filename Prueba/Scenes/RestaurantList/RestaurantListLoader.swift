@@ -23,7 +23,7 @@ class RestaurantListLoader: NSObject {
         }
         currentLocationLabel?.text = store?.lastLocation?.description
         UIView.performWithoutAnimation {
-            tableView?.reloadSections([0], with: .none)
+            tableView?.reloadData()
         }
     }
     
