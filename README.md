@@ -18,4 +18,4 @@ Some considerations to run this project
   - [Scenes](Prueba/Scenes/README.md)
   
   ### Video Demo
-  [![VIDEO DEMO](https://cohesive.net/wp-content/uploads/2016/05/video-icon.png)](https://drive.google.com/file/d/1ddDW7M2331aIdKduATlbXxrFA8T6zZXV/view?usp=sharing)
+  [![VIDEO DEMO](https://cms-assets.tutsplus.com/uploads/users/69/posts/26743/image/basic-video-styles.jpg)](https://drive.google.com/file/d/1aXZP3AxYEm7dEWo5rra5h0WxFz8IndUP/view?usp=sharing)
