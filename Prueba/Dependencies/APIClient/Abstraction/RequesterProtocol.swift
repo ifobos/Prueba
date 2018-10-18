@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Requester {
+protocol RequesterProtocol {
     func launch(_ request: Request, completion: @escaping (Data?, Error?) -> Void)
 }

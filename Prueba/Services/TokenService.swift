@@ -16,14 +16,14 @@ protocol TokenServiceProtocol {
 class TokenService: TokenServiceProtocol {
     
     enum Constant {
-        static let secureKey = "access_token"
+        static let secureKey = "Prueba_access_token"
     }
-    
+
     // MARK: - Dependencies
     lazy var requester = RequesterFactory.newRequester()
+    lazy var tokenStorage = SecureStringStorageFactory.newSecureStringStorage()
+    lazy var appConfiguration: AppConfigurationProtocol = AppConfiguration.shared
     lazy var decoder = JSONDecoder()
-    lazy var tokenStorage = TokenStorageFactory.newSecureStringStorage()
-    lazy var userConfigurations = UserConfigurations()
 
     // MARK: - Token handling
     /// computed property that returns the application access token
@@ -36,8 +36,8 @@ class TokenService: TokenServiceProtocol {
     
     /// function that performs the request for a new token to store in the storage token
     func fetchToken(completion: ((String?) -> Void)? = nil) {
-        let tokenRequestConfiguration = TokenRequestConfiguration(clientId: AppConfiguration.shared.clientId,
-                                                                  clientSecret: AppConfiguration.shared.clientSecret)
+        let tokenRequestConfiguration = TokenRequestConfiguration(clientId: appConfiguration.clientId,
+                                                                  clientSecret: appConfiguration.clientSecret)
         let request = Request(configuration: tokenRequestConfiguration)
         requester.launch(request) {[weak self](data, error) in
             guard let `data` = data,

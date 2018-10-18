@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension UserDefaults: ConfigurationStorageProtocol {}
+extension UserDefaults: DefaultsStorageProtocol {}
 
-extension ConfigurationStorageFactory {
-    static func newConfigurationStorage() -> ConfigurationStorageProtocol {
+extension DefaultsStorageInstance {
+    static func instance() -> DefaultsStorageProtocol {
         return UserDefaults.standard
     }
 }

@@ -19,7 +19,7 @@ struct TokenRequestConfiguration: RequestConfiguration {
         return .get
     }
     
-    var parameters: Parameters? {
+    var parameters: [String: Any]? {
         return ["clientId": clientId,
                 "clientSecret": clientSecret]
     }

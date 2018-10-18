@@ -9,10 +9,10 @@
 import Foundation
 import KeychainAccess
 
-extension Keychain: SecureStringStorage {}
+extension Keychain: SecureStringStorageProtocol {}
 
-extension TokenStorageFactory {
-    static func newSecureStringStorage() -> SecureStringStorage {
+extension SecureStringStorageFactory {
+    static func newSecureStringStorage() -> SecureStringStorageProtocol {
         return Keychain(service: "Prueba App Auth 🔑")
     }
 }

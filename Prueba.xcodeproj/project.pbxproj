@@ -18,6 +18,15 @@
 		7D2724C021772E8E005D7415 /* MyLocationMapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724BF21772E8E005D7415 /* MyLocationMapConfigurator.swift */; };
 		7D2724C221772F6E005D7415 /* MyLocationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724C121772F6E005D7415 /* MyLocationStore.swift */; };
 		7D2724C4217732AF005D7415 /* MyLocationActioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724C3217732AF005D7415 /* MyLocationActioner.swift */; };
+		7D2724C721779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724C621779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift */; };
+		7D2724D52177AAD6005D7415 /* AppWasLaunchedChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724D42177AAD6005D7415 /* AppWasLaunchedChecker.swift */; };
+		7D2724DF2177D62A005D7415 /* TokenServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724DE2177D62A005D7415 /* TokenServiceTests.swift */; };
+		7D2724E42177DAFA005D7415 /* TokenServiceSecureStringStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724E32177DAFA005D7415 /* TokenServiceSecureStringStorageMock.swift */; };
+		7D2724E82177F468005D7415 /* RestaurantServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724E72177F468005D7415 /* RestaurantServiceTests.swift */; };
+		7D2724EC2177FB95005D7415 /* TokenServiceRequesterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724EB2177FB95005D7415 /* TokenServiceRequesterMock.swift */; };
+		7D2724F02177FC94005D7415 /* RestaurantServiceRequesterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724EF2177FC94005D7415 /* RestaurantServiceRequesterMock.swift */; };
+		7D2724F22177FE6D005D7415 /* RestaurantServiceTokenServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2724F12177FE6D005D7415 /* RestaurantServiceTokenServiceMock.swift */; };
+		7D2F5AEC217813D0005CE069 /* AppConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D2F5AEB217813D0005CE069 /* AppConfiguration.plist */; };
 		7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */; };
 		7DB784FD21764FC900984288 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB784FC21764FC900984288 /* CoreLocation.framework */; };
 		7DB784FF21764FF000984288 /* CoreLocationLocalizator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB784FE21764FF000984288 /* CoreLocationLocalizator.swift */; };
@@ -39,7 +48,6 @@
 		7DBD7EE72172A5410010218A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD7EE52172A5410010218A /* Main.storyboard */; };
 		7DBD7EE92172A5420010218A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD7EE82172A5420010218A /* Assets.xcassets */; };
 		7DBD7EEC2172A5420010218A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBD7EEA2172A5420010218A /* LaunchScreen.storyboard */; };
-		7DBD7EF72172A5420010218A /* PruebaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7EF62172A5420010218A /* PruebaTests.swift */; };
 		7DBD7F03217379290010218A /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F02217379290010218A /* Request.swift */; };
 		7DBD7F06217398350010218A /* AlamoRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F05217398350010218A /* AlamoRequestConvertible.swift */; };
 		7DBD7F082173B9870010218A /* AlamoRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F072173B9870010218A /* AlamoRequester.swift */; };
@@ -49,12 +57,12 @@
 		7DBD7F18217413210010218A /* TokenRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F17217413210010218A /* TokenRequestConfiguration.swift */; };
 		7DBD7F1B21741B980010218A /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F1A21741B980010218A /* Token.swift */; };
 		7DBD7F202174253D0010218A /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F1F2174253D0010218A /* KeychainAccess.swift */; };
-		7DBD7F2321744E820010218A /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F2221744E820010218A /* Requester.swift */; };
+		7DBD7F2321744E820010218A /* RequesterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F2221744E820010218A /* RequesterProtocol.swift */; };
 		7DBD7F262174C2160010218A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F252174C2160010218A /* UserDefaults.swift */; };
-		7DBD7F282174C9C20010218A /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F272174C9C20010218A /* UserConfiguration.swift */; };
-		7DBD7F2B2174E99A0010218A /* ConfigurationStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F2A2174E99A0010218A /* ConfigurationStorageFactory.swift */; };
-		7DBD7F2D2174EA600010218A /* SecureStringStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F2C2174EA600010218A /* SecureStringStorage.swift */; };
-		7DBD7F2F2174EA9C0010218A /* TokenStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F2E2174EA9C0010218A /* TokenStorageFactory.swift */; };
+		7DBD7F282174C9C20010218A /* DefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F272174C9C20010218A /* DefaultsStorage.swift */; };
+		7DBD7F2B2174E99A0010218A /* DefaultsStorageInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F2A2174E99A0010218A /* DefaultsStorageInstance.swift */; };
+		7DBD7F2D2174EA600010218A /* SecureStringStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F2C2174EA600010218A /* SecureStringStorageProtocol.swift */; };
+		7DBD7F2F2174EA9C0010218A /* SecureStringStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F2E2174EA9C0010218A /* SecureStringStorageFactory.swift */; };
 		7DBD7F312174EBCC0010218A /* RequesterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F302174EBCC0010218A /* RequesterFactory.swift */; };
 		7DBD7F34217508700010218A /* SearchRestaurantsRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F33217508700010218A /* SearchRestaurantsRequestConfiguration.swift */; };
 		7DBD7F3621751D840010218A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD7F3521751D840010218A /* Restaurant.swift */; };
@@ -91,6 +99,21 @@
 		7D2724BF21772E8E005D7415 /* MyLocationMapConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationMapConfigurator.swift; sourceTree = "<group>"; };
 		7D2724C121772F6E005D7415 /* MyLocationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationStore.swift; sourceTree = "<group>"; };
 		7D2724C3217732AF005D7415 /* MyLocationActioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationActioner.swift; sourceTree = "<group>"; };
+		7D2724C621779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantListViewController+PrepareForSegues.swift"; sourceTree = "<group>"; };
+		7D2724C82177A018005D7415 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D2724D42177AAD6005D7415 /* AppWasLaunchedChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWasLaunchedChecker.swift; sourceTree = "<group>"; };
+		7D2724D62177C957005D7415 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D2724D72177C9FF005D7415 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D2724DA2177CE73005D7415 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D2724DB2177CF42005D7415 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D2724DC2177D005005D7415 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D2724DE2177D62A005D7415 /* TokenServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceTests.swift; sourceTree = "<group>"; };
+		7D2724E32177DAFA005D7415 /* TokenServiceSecureStringStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceSecureStringStorageMock.swift; sourceTree = "<group>"; };
+		7D2724E72177F468005D7415 /* RestaurantServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantServiceTests.swift; sourceTree = "<group>"; };
+		7D2724EB2177FB95005D7415 /* TokenServiceRequesterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenServiceRequesterMock.swift; sourceTree = "<group>"; };
+		7D2724EF2177FC94005D7415 /* RestaurantServiceRequesterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantServiceRequesterMock.swift; sourceTree = "<group>"; };
+		7D2724F12177FE6D005D7415 /* RestaurantServiceTokenServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantServiceTokenServiceMock.swift; sourceTree = "<group>"; };
+		7D2F5AEB217813D0005CE069 /* AppConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppConfiguration.plist; sourceTree = "<group>"; };
 		7D514F73B47EF77CDE15DE32 /* Pods_Prueba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prueba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenServiceConfigurator.swift; sourceTree = "<group>"; };
 		7DB784FC21764FC900984288 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -116,7 +139,6 @@
 		7DBD7EEB2172A5420010218A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DBD7EED2172A5420010218A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DBD7EF22172A5420010218A /* PruebaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7DBD7EF62172A5420010218A /* PruebaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaTests.swift; sourceTree = "<group>"; };
 		7DBD7EF82172A5420010218A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DBD7F02217379290010218A /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		7DBD7F05217398350010218A /* AlamoRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoRequestConvertible.swift; sourceTree = "<group>"; };
@@ -127,12 +149,12 @@
 		7DBD7F17217413210010218A /* TokenRequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequestConfiguration.swift; sourceTree = "<group>"; };
 		7DBD7F1A21741B980010218A /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		7DBD7F1F2174253D0010218A /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
-		7DBD7F2221744E820010218A /* Requester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		7DBD7F2221744E820010218A /* RequesterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequesterProtocol.swift; sourceTree = "<group>"; };
 		7DBD7F252174C2160010218A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		7DBD7F272174C9C20010218A /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
-		7DBD7F2A2174E99A0010218A /* ConfigurationStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorageFactory.swift; sourceTree = "<group>"; };
-		7DBD7F2C2174EA600010218A /* SecureStringStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStringStorage.swift; sourceTree = "<group>"; };
-		7DBD7F2E2174EA9C0010218A /* TokenStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorageFactory.swift; sourceTree = "<group>"; };
+		7DBD7F272174C9C20010218A /* DefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStorage.swift; sourceTree = "<group>"; };
+		7DBD7F2A2174E99A0010218A /* DefaultsStorageInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStorageInstance.swift; sourceTree = "<group>"; };
+		7DBD7F2C2174EA600010218A /* SecureStringStorageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStringStorageProtocol.swift; sourceTree = "<group>"; };
+		7DBD7F2E2174EA9C0010218A /* SecureStringStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStringStorageFactory.swift; sourceTree = "<group>"; };
 		7DBD7F302174EBCC0010218A /* RequesterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesterFactory.swift; sourceTree = "<group>"; };
 		7DBD7F33217508700010218A /* SearchRestaurantsRequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRestaurantsRequestConfiguration.swift; sourceTree = "<group>"; };
 		7DBD7F3521751D840010218A /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -195,20 +217,158 @@
 		7D2724C5217797B0005D7415 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				7DBD7F01217379090010218A /* API Client */,
+				7D2724C82177A018005D7415 /* README.md */,
+				7DBD7F01217379090010218A /* APIClient */,
 				7DBD7F1C2174241D0010218A /* SecureStorage */,
-				7DBD7F242174C1D20010218A /* UserConfigurationStorage */,
+				7DBD7F242174C1D20010218A /* DefaultsStorage */,
 				7DB784F9217645BE00984288 /* Location */,
 				7DB785082176931C00984288 /* Maps */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
-		7DB784F9217645BE00984288 /* Location */ = {
+		7D2724C92177A279005D7415 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD7F02217379290010218A /* Request.swift */,
+				7DBD7F2221744E820010218A /* RequesterProtocol.swift */,
+				7D099CCC2175D49A00C903FE /* AuthRetrier.swift */,
+				7D099CCE2175D90000C903FE /* AuthAdapter.swift */,
+				7DBD7F162173DE740010218A /* RequestConfigurations */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		7D2724CA2177A2B0005D7415 /* Instantiation */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD7F302174EBCC0010218A /* RequesterFactory.swift */,
+			);
+			path = Instantiation;
+			sourceTree = "<group>";
+		};
+		7D2724CB2177A2E0005D7415 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD7F2C2174EA600010218A /* SecureStringStorageProtocol.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		7D2724CC2177A2F6005D7415 /* Instantiation */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD7F2E2174EA9C0010218A /* SecureStringStorageFactory.swift */,
+			);
+			path = Instantiation;
+			sourceTree = "<group>";
+		};
+		7D2724CE2177A349005D7415 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD7F272174C9C20010218A /* DefaultsStorage.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		7D2724CF2177A378005D7415 /* Instantiation */ = {
+			isa = PBXGroup;
+			children = (
+				7DBD7F2A2174E99A0010218A /* DefaultsStorageInstance.swift */,
+			);
+			path = Instantiation;
+			sourceTree = "<group>";
+		};
+		7D2724D02177A394005D7415 /* Abstraction */ = {
 			isa = PBXGroup;
 			children = (
 				7DB78501217651E500984288 /* Localizator.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		7D2724D12177A3A1005D7415 /* Instantiation */ = {
+			isa = PBXGroup;
+			children = (
 				7DB785032176591900984288 /* LocalizatorFactory.swift */,
+			);
+			path = Instantiation;
+			sourceTree = "<group>";
+		};
+		7D2724D22177A3D2005D7415 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				7DB785092176935A00984288 /* MapsConfigurator.swift */,
+				7DB7851221769FFC00984288 /* MapViewConfigurator.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		7D2724D32177A426005D7415 /* Instantiation */ = {
+			isa = PBXGroup;
+			children = (
+				7DB7851021769E1200984288 /* MapViewConfiguratorFactory.swift */,
+			);
+			path = Instantiation;
+			sourceTree = "<group>";
+		};
+		7D2724DD2177D5D7005D7415 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7D2724E92177FB2F005D7415 /* TokenService */,
+				7D2724ED2177FC11005D7415 /* RestaurantService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7D2724E02177D7BA005D7415 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7D2724E92177FB2F005D7415 /* TokenService */ = {
+			isa = PBXGroup;
+			children = (
+				7D2724DE2177D62A005D7415 /* TokenServiceTests.swift */,
+				7D2724EA2177FB44005D7415 /* Mocks */,
+			);
+			path = TokenService;
+			sourceTree = "<group>";
+		};
+		7D2724EA2177FB44005D7415 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7D2724E32177DAFA005D7415 /* TokenServiceSecureStringStorageMock.swift */,
+				7D2724EB2177FB95005D7415 /* TokenServiceRequesterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7D2724ED2177FC11005D7415 /* RestaurantService */ = {
+			isa = PBXGroup;
+			children = (
+				7D2724E72177F468005D7415 /* RestaurantServiceTests.swift */,
+				7D2724EE2177FC2E005D7415 /* Mocks */,
+			);
+			path = RestaurantService;
+			sourceTree = "<group>";
+		};
+		7D2724EE2177FC2E005D7415 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7D2724EF2177FC94005D7415 /* RestaurantServiceRequesterMock.swift */,
+				7D2724F12177FE6D005D7415 /* RestaurantServiceTokenServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7DB784F9217645BE00984288 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				7D2724D02177A394005D7415 /* Abstraction */,
+				7D2724D12177A3A1005D7415 /* Instantiation */,
 				7DB78500217651B600984288 /* CoreLocationImplementation */,
 			);
 			path = Location;
@@ -236,9 +396,8 @@
 		7DB785082176931C00984288 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				7DB785092176935A00984288 /* MapsConfigurator.swift */,
-				7DB7851221769FFC00984288 /* MapViewConfigurator.swift */,
-				7DB7851021769E1200984288 /* MapViewConfiguratorFactory.swift */,
+				7D2724D22177A3D2005D7415 /* Abstraction */,
+				7D2724D32177A426005D7415 /* Instantiation */,
 				7DB7850B2176937000984288 /* GoogleMapsImplementation */,
 			);
 			path = Maps;
@@ -283,10 +442,10 @@
 				7DBD7F37217520DC0010218A /* Utils */,
 				7DBD7F4121753C700010218A /* Scenes */,
 				7DBD7EE12172A5410010218A /* AppDelegate.swift */,
-				7DBD7EE52172A5410010218A /* Main.storyboard */,
 				7DBD7EE82172A5420010218A /* Assets.xcassets */,
 				7DBD7EEA2172A5420010218A /* LaunchScreen.storyboard */,
 				7DBD7EED2172A5420010218A /* Info.plist */,
+				7D2F5AEB217813D0005CE069 /* AppConfiguration.plist */,
 			);
 			path = Prueba;
 			sourceTree = "<group>";
@@ -294,24 +453,21 @@
 		7DBD7EF52172A5420010218A /* PruebaTests */ = {
 			isa = PBXGroup;
 			children = (
-				7DBD7EF62172A5420010218A /* PruebaTests.swift */,
+				7D2724E02177D7BA005D7415 /* Mocks */,
+				7D2724DD2177D5D7005D7415 /* Services */,
 				7DBD7EF82172A5420010218A /* Info.plist */,
 			);
 			path = PruebaTests;
 			sourceTree = "<group>";
 		};
-		7DBD7F01217379090010218A /* API Client */ = {
+		7DBD7F01217379090010218A /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				7DBD7F162173DE740010218A /* RequestConfigurations */,
+				7D2724C92177A279005D7415 /* Abstraction */,
+				7D2724CA2177A2B0005D7415 /* Instantiation */,
 				7DBD7F04217397C30010218A /* AlamofireImplementation */,
-				7DBD7F02217379290010218A /* Request.swift */,
-				7DBD7F2221744E820010218A /* Requester.swift */,
-				7DBD7F302174EBCC0010218A /* RequesterFactory.swift */,
-				7D099CCC2175D49A00C903FE /* AuthRetrier.swift */,
-				7D099CCE2175D90000C903FE /* AuthAdapter.swift */,
 			);
-			path = "API Client";
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 		7DBD7F04217397C30010218A /* AlamofireImplementation */ = {
@@ -328,6 +484,7 @@
 		7DBD7F0B2173D30B0010218A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7D2724D72177C9FF005D7415 /* README.md */,
 				7DBD7F122173DAAA0010218A /* TokenService.swift */,
 				7DBD7F3A2175244A0010218A /* RestaurantService.swift */,
 			);
@@ -347,6 +504,7 @@
 		7DBD7F1921741B780010218A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D2724DA2177CE73005D7415 /* README.md */,
 				7DBD7F1A21741B980010218A /* Token.swift */,
 				7DBD7F3521751D840010218A /* Restaurant.swift */,
 				7DBD7F3C2175296B0010218A /* RestaurantSearchResult.swift */,
@@ -358,8 +516,8 @@
 		7DBD7F1C2174241D0010218A /* SecureStorage */ = {
 			isa = PBXGroup;
 			children = (
-				7DBD7F2C2174EA600010218A /* SecureStringStorage.swift */,
-				7DBD7F2E2174EA9C0010218A /* TokenStorageFactory.swift */,
+				7D2724CB2177A2E0005D7415 /* Abstraction */,
+				7D2724CC2177A2F6005D7415 /* Instantiation */,
 				7DBD7F2121742A520010218A /* KeychainAccessImplementation */,
 			);
 			path = SecureStorage;
@@ -373,14 +531,14 @@
 			path = KeychainAccessImplementation;
 			sourceTree = "<group>";
 		};
-		7DBD7F242174C1D20010218A /* UserConfigurationStorage */ = {
+		7DBD7F242174C1D20010218A /* DefaultsStorage */ = {
 			isa = PBXGroup;
 			children = (
-				7DBD7F272174C9C20010218A /* UserConfiguration.swift */,
-				7DBD7F2A2174E99A0010218A /* ConfigurationStorageFactory.swift */,
+				7D2724CE2177A349005D7415 /* Abstraction */,
+				7D2724CF2177A378005D7415 /* Instantiation */,
 				7DBD7F292174C9FC0010218A /* UserDefaultsImplementation */,
 			);
-			path = UserConfigurationStorage;
+			path = DefaultsStorage;
 			sourceTree = "<group>";
 		};
 		7DBD7F292174C9FC0010218A /* UserDefaultsImplementation */ = {
@@ -394,9 +552,11 @@
 		7DBD7F37217520DC0010218A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7D2724DB2177CF42005D7415 /* README.md */,
 				7DBD7F4B217552FD0010218A /* RestaurantStore.swift */,
 				7DBD7F3E21752DB60010218A /* Pagination.swift */,
 				7D2724B62176FA13005D7415 /* AbstractRestaurantsFetcher.swift */,
+				7D2724D42177AAD6005D7415 /* AppWasLaunchedChecker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -404,6 +564,7 @@
 		7DBD7F402175329B0010218A /* AppConfiguration */ = {
 			isa = PBXGroup;
 			children = (
+				7D2724D62177C957005D7415 /* README.md */,
 				7DBD7F0E2173D6BE0010218A /* AppConfiguration.swift */,
 				7DB784FA21764A5A00984288 /* TokenServiceConfigurator.swift */,
 			);
@@ -413,9 +574,11 @@
 		7DBD7F4121753C700010218A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				7D2724BC21772DEC005D7415 /* MyLocation */,
-				7DB785072176889F00984288 /* RestaurantsMap */,
+				7D2724DC2177D005005D7415 /* README.md */,
+				7DBD7EE52172A5410010218A /* Main.storyboard */,
 				7DBD7F4421753CF90010218A /* RestaurantList */,
+				7DB785072176889F00984288 /* RestaurantsMap */,
+				7D2724BC21772DEC005D7415 /* MyLocation */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -424,6 +587,7 @@
 			isa = PBXGroup;
 			children = (
 				7DBD7F4221753CF10010218A /* RestaurantListViewController.swift */,
+				7D2724C621779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift */,
 				7DBD7F4521753E7C0010218A /* RestaurantListDataSource.swift */,
 				7DBD7F492175521F0010218A /* RestaurantListDelegate.swift */,
 				7DBD7F4D2175590E0010218A /* RestaurantListFetcher.swift */,
@@ -540,6 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DBD7EEC2172A5420010218A /* LaunchScreen.storyboard in Resources */,
+				7D2F5AEC217813D0005CE069 /* AppConfiguration.plist in Resources */,
 				7DBD7EE92172A5420010218A /* Assets.xcassets in Resources */,
 				7DBD7EE72172A5410010218A /* Main.storyboard in Resources */,
 			);
@@ -655,21 +820,23 @@
 				7DBD7F18217413210010218A /* TokenRequestConfiguration.swift in Sources */,
 				7DB7850F21769BC000984288 /* GoogleMapViewConfigurator.swift in Sources */,
 				7DB7850A2176935A00984288 /* MapsConfigurator.swift in Sources */,
+				7D2724D52177AAD6005D7415 /* AppWasLaunchedChecker.swift in Sources */,
 				7DBD7F4C217552FD0010218A /* RestaurantStore.swift in Sources */,
 				7DBD7F132173DAAA0010218A /* TokenService.swift in Sources */,
 				7DB785232176F25F00984288 /* RestaurantsMapConfigurator.swift in Sources */,
 				7DB785152176A28D00984288 /* RestaurantsMapViewController.swift in Sources */,
 				7DBD7F4A2175521F0010218A /* RestaurantListDelegate.swift in Sources */,
-				7DBD7F2B2174E99A0010218A /* ConfigurationStorageFactory.swift in Sources */,
+				7DBD7F2B2174E99A0010218A /* DefaultsStorageInstance.swift in Sources */,
+				7D2724C721779F57005D7415 /* RestaurantListViewController+PrepareForSegues.swift in Sources */,
 				7DBD7F3B2175244A0010218A /* RestaurantService.swift in Sources */,
-				7DBD7F2F2174EA9C0010218A /* TokenStorageFactory.swift in Sources */,
-				7DBD7F2D2174EA600010218A /* SecureStringStorage.swift in Sources */,
+				7DBD7F2F2174EA9C0010218A /* SecureStringStorageFactory.swift in Sources */,
+				7DBD7F2D2174EA600010218A /* SecureStringStorageProtocol.swift in Sources */,
 				7D2724C021772E8E005D7415 /* MyLocationMapConfigurator.swift in Sources */,
 				7D099CC721759D3300C903FE /* RestaurantListLoader.swift in Sources */,
 				7D099CCB2175BCD900C903FE /* AlamoRequestAdapter.swift in Sources */,
 				7DBD7F0D2173D6820010218A /* RequestConfiguration.swift in Sources */,
 				7D099CC92175AB6800C903FE /* AlamoRequestRetrier.swift in Sources */,
-				7DBD7F2321744E820010218A /* Requester.swift in Sources */,
+				7DBD7F2321744E820010218A /* RequesterProtocol.swift in Sources */,
 				7D2724B72176FA13005D7415 /* AbstractRestaurantsFetcher.swift in Sources */,
 				7DB784FB21764A5A00984288 /* TokenServiceConfigurator.swift in Sources */,
 				7DBD7F1B21741B980010218A /* Token.swift in Sources */,
@@ -682,7 +849,7 @@
 				7DBD7F4E2175590E0010218A /* RestaurantListFetcher.swift in Sources */,
 				7DB785172176A31200984288 /* RestaurantsMapActioner.swift in Sources */,
 				7DBD7F312174EBCC0010218A /* RequesterFactory.swift in Sources */,
-				7DBD7F282174C9C20010218A /* UserConfiguration.swift in Sources */,
+				7DBD7F282174C9C20010218A /* DefaultsStorage.swift in Sources */,
 				7DBD7F3F21752DB60010218A /* Pagination.swift in Sources */,
 				7DBD7F03217379290010218A /* Request.swift in Sources */,
 				7DB7850621765D7600984288 /* GeoPoint.swift in Sources */,
@@ -710,7 +877,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DBD7EF72172A5420010218A /* PruebaTests.swift in Sources */,
+				7D2724F02177FC94005D7415 /* RestaurantServiceRequesterMock.swift in Sources */,
+				7D2724EC2177FB95005D7415 /* TokenServiceRequesterMock.swift in Sources */,
+				7D2724E82177F468005D7415 /* RestaurantServiceTests.swift in Sources */,
+				7D2724E42177DAFA005D7415 /* TokenServiceSecureStringStorageMock.swift in Sources */,
+				7D2724F22177FE6D005D7415 /* RestaurantServiceTokenServiceMock.swift in Sources */,
+				7D2724DF2177D62A005D7415 /* TokenServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  RequesterFactory.swift
+//  TokenStorageFactory.swift
 //  Prueba
 //
 //  Created by Juan Carlos Garcia Alfaro on 10/15/18.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol RequesterFactoryProtocol {
-    static func newRequester() -> Requester
+protocol TokenStorageFactoryProtocol {
+    static func newSecureStringStorage() -> SecureStringStorageProtocol
 }
 
-enum RequesterFactory: RequesterFactoryProtocol {
+enum SecureStringStorageFactory: TokenStorageFactoryProtocol {
     // This factory has no implementation because it must be extended and implemented from the default dependency
 }

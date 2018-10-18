@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Restaurant: Decodable {
+struct Restaurant: Codable {
     let name: String?
     let coordinates: String?
     
@@ -16,7 +16,9 @@ struct Restaurant: Decodable {
         case name
         case coordinates
     }
-    
+}
+
+extension Restaurant {
     var location: GeoPoint? {
         guard let `coordinates` = coordinates else {
             return nil
@@ -27,7 +29,7 @@ struct Restaurant: Decodable {
             let longitudeString = coordinatesValues.last,
             let latitude = Double(latitudeString),
             let longitude = Double(longitudeString) else {
-            return nil
+                return nil
         }
         return GeoPoint(latitude: latitude, longitude: longitude)
     }

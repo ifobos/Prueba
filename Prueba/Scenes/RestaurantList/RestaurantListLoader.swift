@@ -12,10 +12,10 @@ class RestaurantListLoader: NSObject {
     
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var store: RestaurantStore?
-    @IBOutlet weak var navigationItem: UINavigationItem?
+    @IBOutlet weak var currentLocationLabel: UILabel?
     
     func reload() {
-        navigationItem?.title = store?.lastLocation?.description
+        currentLocationLabel?.text = store?.lastLocation?.description
         UIView.performWithoutAnimation {
             tableView?.reloadSections([0], with: .none)
         }

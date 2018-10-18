@@ -25,22 +25,11 @@ class RestaurantListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.goToRestaurantsMap,
-            let destination = segue.destination as? RestaurantsMapViewController,
-            let destinationStore = destination.store,
-            let sourceStore = store {
-            destinationStore.lastLocation = sourceStore.lastLocation
+            let destination = segue.destination as? RestaurantsMapViewController {
+            prepateForGo(to: destination)
         } else if segue.identifier == Constant.goToMyLocation,
-            let destination = segue.destination as? MyLocationViewController,
-            let destinationStore = destination.store,
-            let sourceStore = store,
-            let destinationActioner = destination.actioner {
-            destinationStore.myCurrentLocation = sourceStore.lastLocation
-            destinationActioner.saveAction = { [weak self] newLocation in
-                self?.store?.lastLocation = newLocation
-                self?.fetcher?.fetch()
-            }
+            let destination = segue.destination as? MyLocationViewController {
+            prepateForGo(to: destination)
         }
-
     }
-    
 }
