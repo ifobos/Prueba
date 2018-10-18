@@ -28,12 +28,11 @@ class RestaurantListLoader: NSObject {
     }
     
     func load(_ error: Error?) {
-        store?.lastLocation = nil
-        reload()
         guard let `error` = error else {
             return
         }
-        
+        store?.lastLocation = nil
+        reload()
         messageLabel?.text = error.localizedDescription
         for button in actionButtons ?? [] {
             button.isEnabled = false
