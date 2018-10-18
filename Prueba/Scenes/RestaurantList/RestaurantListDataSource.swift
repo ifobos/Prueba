@@ -29,7 +29,7 @@ class RestaurantListDataSource: NSObject, UITableViewDataSource {
             return UITableViewCell()
         }
         if let restaurant = store?.restaurants[indexPath.row] {
-            cell.textLabel?.text = "\(indexPath.row)  " + (restaurant.name ?? "")
+            cell.textLabel?.text = "\(indexPath.row + 1) - " + (restaurant.name ?? "")
             cell.detailTextLabel?.text = restaurant.coordinates
         }
         return cell
