@@ -14,9 +14,6 @@ class RestaurantListDelegate: NSObject, UITableViewDelegate {
     @IBOutlet weak var fetcher: RestaurantListFetcher?
     
     // MARK: - UITableViewDelegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath)")
-    }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == (store?.restaurants.count ?? 1) - 1 {

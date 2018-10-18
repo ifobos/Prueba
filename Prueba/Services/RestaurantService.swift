@@ -11,7 +11,7 @@ import Foundation
 protocol RestaurantServiceProtocol {
     func search(by location: GeoPoint,
                 pagination: PaginationProtocol,
-                completion: @escaping (RestaurantSearchResult?) -> Void )
+                completion: @escaping (RestaurantSearchResult?, Error?) -> Void )
 }
 
 class RestaurantService: RestaurantServiceProtocol {
@@ -25,7 +25,7 @@ class RestaurantService: RestaurantServiceProtocol {
     // MARK: - Search handling
     func search(by location: GeoPoint,
                 pagination: PaginationProtocol,
-                completion: @escaping (RestaurantSearchResult?) -> Void ) {
+                completion: @escaping (RestaurantSearchResult?, Error?) -> Void ) {
         
         let requestConfiguration = SearchRestaurantsRequestConfiguration(location: location,
                                                                          country: appConfiguration.defaultCountryId,
@@ -38,10 +38,10 @@ class RestaurantService: RestaurantServiceProtocol {
             guard let `data` = data,
                 let searchResult = try? self?.decoder.decode(RestaurantSearchResult.self, from: data) else {
                 debugPrint("File: \(#file) Line: \(#line) Error: \(error as Any)")
-                completion(nil)
+                completion(nil, error)
                 return
             }
-            completion(searchResult)
+            completion(searchResult, nil)
         }
     }
         

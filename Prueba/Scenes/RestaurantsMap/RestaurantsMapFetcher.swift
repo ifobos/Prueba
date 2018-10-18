@@ -25,7 +25,8 @@ class RestaurantsMapFetcher: NSObject, RestaurantsFetcherProtocol {
     
     // MARK: - Fetch handling
     
-    func fetchCompletion() {
+    func fetchSuccess() {
         map?.configurator.loadRestaurants(store?.restaurants)
     }
+    
 }

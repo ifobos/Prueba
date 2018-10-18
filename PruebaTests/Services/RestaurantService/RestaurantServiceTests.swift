@@ -29,7 +29,7 @@ class RestaurantServiceTests: XCTestCase {
     func test_sinceANewSearchIsRequested_ACorrectRequestIsSent() {
         let point = GeoPoint(latitude: 1, longitude: 1)
         let pagination = Pagination(offset: 1, pageSize: 1)
-        restaurantService.search(by: point, pagination: pagination) { _ in }
+        restaurantService.search(by: point, pagination: pagination) { _, _  in }
         let request = requesterMock?.request?.configuration as? SearchRestaurantsRequestConfiguration
         
         XCTAssertNotNil(request)
@@ -52,7 +52,7 @@ class RestaurantServiceTests: XCTestCase {
         requesterMock.searchResult = searchResult
         let point = GeoPoint(latitude: 1, longitude: 1)
         let pagination = Pagination(offset: 1, pageSize: 1)
-        restaurantService.search(by: point, pagination: pagination) { result in
+        restaurantService.search(by: point, pagination: pagination) { result, _  in
             XCTAssertEqual(result?.total, searchResult.total)
             XCTAssertEqual(result?.offset, searchResult.offset)
             XCTAssertEqual(result?.count, searchResult.count)
