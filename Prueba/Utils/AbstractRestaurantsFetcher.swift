@@ -17,7 +17,8 @@ protocol RestaurantsFetcherProtocol: class {
     var localizator: LocalizatorProtocol { get }
     
     func fetch()
-    func fetchCompletion()
+    func fetchSuccess()
+    func fetchFailure(_ error: Error?)
 }
 
 extension RestaurantsFetcherProtocol {
@@ -43,7 +44,12 @@ extension RestaurantsFetcherProtocol {
         if let coordinate = store?.lastLocation {
             fetchRestaurants(by: coordinate, completion: completion)
         } else {
-            localizator.currentLocation { [weak self] (coordinate) in
+            localizator.currentLocation { [weak self] (coordinate, error) in
+                guard let `coordinate` = coordinate else {
+                    completion()
+                    self?.fetchFailure(error)
+                    return
+                }
                 self?.store?.lastLocation = coordinate
                 self?.fetchRestaurants(by: coordinate, completion: completion)
             }
@@ -54,7 +60,7 @@ extension RestaurantsFetcherProtocol {
         guard let pagination = store?.pagination else {
             return
         }
-        restaurantService.search(by: location, pagination: pagination) { [weak self] (searchResult) in
+        restaurantService.search(by: location, pagination: pagination) { [weak self] (searchResult, error) in
             completion()
             print("\(searchResult as Any)")
             guard let result = searchResult,
@@ -64,13 +70,16 @@ extension RestaurantsFetcherProtocol {
                 let total = result.total,
                 offset < total else {
                     print("\(String(describing: searchResult))")
+                    self?.fetchFailure(error)
                     return
             }
             
             self?.store?.restaurants.append(contentsOf: data)
             self?.store?.pagination.offset = offset + count
-            self?.fetchCompletion()
+            self?.fetchSuccess()
         }
     }
     
+    func fetchFailure(_ error: Error?) {}
+
 }

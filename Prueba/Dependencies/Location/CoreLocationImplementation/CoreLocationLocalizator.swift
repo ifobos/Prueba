@@ -19,19 +19,19 @@ class CoreLocationLocalizator: NSObject, LocalizatorProtocol {
     
     var currentLocation: GeoPoint? {
         didSet {
-            guard let `currentLocation` = currentLocation else {
-                return
-            }
-            for pendingCompletion in pendingCompletions {
-                pendingCompletion(currentLocation)
-            }
-            pendingCompletions.removeAll()
+            dispatchPendingCompletions(location: currentLocation, error: error)
+        }
+    }
+    
+    var error: Error? {
+        didSet {
+            dispatchPendingCompletions(location: currentLocation, error: error)
         }
     }
     
     var locationManager: CLLocationManager
     
-    var pendingCompletions: [(GeoPoint) -> Void] = []
+    var pendingCompletions: [(GeoPoint?, Error?) -> Void] = []
     
     override init() {
         locationManager = CLLocationManager()
@@ -42,22 +42,33 @@ class CoreLocationLocalizator: NSObject, LocalizatorProtocol {
         locationManager.delegate = self
     }
     
-    func currentLocation(completion: @escaping (GeoPoint) -> Void) {
-        if let `currentLocation` = currentLocation {
-            completion(currentLocation)
-        } else {
-            pendingCompletions.append(completion)
+    func currentLocation(completion: @escaping (GeoPoint?, Error?) -> Void) {
+        pendingCompletions.append(completion)
+        if currentLocation != nil || error != nil {
+            dispatchPendingCompletions(location: currentLocation, error: error)
         }
-        
+    }
+    
+    func dispatchPendingCompletions(location: GeoPoint?, error: Error?) {
+        for pendingCompletion in pendingCompletions {
+            pendingCompletion(location, error)
+        }
+        pendingCompletions.removeAll()
     }
     
 }
 
 extension CoreLocationLocalizator: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let coordinate = locations.last?.coordinate else {
             return
         }
         currentLocation = GeoPoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        self.error = error
+    }
+
 }

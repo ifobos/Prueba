@@ -12,9 +12,6 @@ class RestaurantStore: NSObject {
     
     var lastLocation: GeoPoint? {
         willSet {
-            if newValue == lastLocation {
-                return
-            }
             restaurants.removeAll()
             pagination = Pagination()
         }
