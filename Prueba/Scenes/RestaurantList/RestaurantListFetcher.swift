@@ -23,9 +23,11 @@ class RestaurantListFetcher: NSObject, RestaurantsFetcherProtocol {
     var localizator: LocalizatorProtocol = LocalizatorFactory.newLocalizator()
     
     // MARK: - Fetch handling
-    
-    func fetchCompletion() {
+    func fetchSuccess() {
         loader?.reload()
     }
-
+    
+    func fetchFailure(_ error: Error?) {
+        loader?.load(error)
+    }
 }

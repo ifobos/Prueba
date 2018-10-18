@@ -27,19 +27,28 @@
                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hvx-qv-GFN">
                                             <rect key="frame" x="177.5" y="12" width="20" height="20"/>
                                         </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxf-MK-gVL" userLabel="MessageLabel">
+                                            <rect key="frame" x="20" y="20" width="335" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Hvx-qv-GFN" firstAttribute="centerX" secondItem="UaQ-ws-Gox" secondAttribute="centerX" id="7kv-ow-OQY"/>
+                                        <constraint firstAttribute="trailing" secondItem="Yxf-MK-gVL" secondAttribute="trailing" constant="20" symbolic="YES" id="BiD-ly-P6r"/>
+                                        <constraint firstItem="Yxf-MK-gVL" firstAttribute="leading" secondItem="UaQ-ws-Gox" secondAttribute="leading" constant="20" symbolic="YES" id="Nlq-hr-NlT"/>
                                         <constraint firstItem="Hvx-qv-GFN" firstAttribute="centerY" secondItem="UaQ-ws-Gox" secondAttribute="centerY" id="PNL-WZ-c74"/>
+                                        <constraint firstItem="Yxf-MK-gVL" firstAttribute="top" secondItem="UaQ-ws-Gox" secondAttribute="top" constant="20" symbolic="YES" id="fO2-zr-acj"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="jzR-V7-avt" detailTextLabel="1xb-C0-Rgu" style="IBUITableViewCellStyleSubtitle" id="wEc-as-way">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="jzR-V7-avt" detailTextLabel="1xb-C0-Rgu" style="IBUITableViewCellStyleSubtitle" id="wEc-as-way">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wEc-as-way" id="du2-6J-Ck5">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jzR-V7-avt">
@@ -141,8 +150,11 @@
                 <customObject id="ivj-UI-kbj" userLabel="Loader" customClass="RestaurantListLoader" customModule="Prueba" customModuleProvider="target">
                     <connections>
                         <outlet property="currentLocationLabel" destination="fFF-fX-edL" id="d8j-9x-JPc"/>
+                        <outlet property="messageLabel" destination="Yxf-MK-gVL" id="N52-Qh-nwh"/>
                         <outlet property="store" destination="8qT-nf-txR" id="eDr-or-Dzw"/>
                         <outlet property="tableView" destination="GLD-jS-scq" id="x6t-35-nLh"/>
+                        <outletCollection property="actionButtons" destination="oC9-Su-h0h" collectionClass="NSMutableArray" id="hVp-o4-ua8"/>
+                        <outletCollection property="actionButtons" destination="OgO-WI-M0g" collectionClass="NSMutableArray" id="9ah-Eg-zwi"/>
                     </connections>
                 </customObject>
             </objects>
