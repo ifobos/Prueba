@@ -59,10 +59,10 @@ extension AppConfiguration {
 
 extension AppConfiguration {
     var clientId: String {
-        return "trivia_f"
+        return "<<clientId>>"
     }
     
     var clientSecret: String {
-        return "PeY@@Tr1v1@943"
+        return "<<clientSecret>>"
     }
 }
