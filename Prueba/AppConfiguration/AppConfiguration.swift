@@ -29,6 +29,16 @@ struct AppConfiguration: AppConfigurationProtocol, Decodable {
 }
 
 extension AppConfiguration {
+    var clientId: String {
+        return "<<clientId>>"
+    }
+    
+    var clientSecret: String {
+        return "<<clientSecret>>"
+    }
+}
+
+extension AppConfiguration {
     private static func defaultConfiguration() -> AppConfiguration {
         do {
             let configuration = try loadFromConfigurationFile()
@@ -54,15 +64,5 @@ extension AppConfiguration {
         } else {
             return ""
         }
-    }
-}
-
-extension AppConfiguration {
-    var clientId: String {
-        return "<<clientId>>"
-    }
-    
-    var clientSecret: String {
-        return "<<clientSecret>>"
     }
 }
