@@ -8,7 +8,8 @@ target 'Prueba' do
   # Pods for Prueba
   pod 'Alamofire', '~> 4.7'
   pod 'KeychainAccess', '~> 3.1'
-
+  pod 'GoogleMaps'
+  
   target 'PruebaTests' do
     inherit! :search_paths
     # Pods for testing

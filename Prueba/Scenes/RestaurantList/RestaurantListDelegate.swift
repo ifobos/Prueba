@@ -10,7 +10,7 @@ import UIKit
 
 class RestaurantListDelegate: NSObject, UITableViewDelegate {
     // MARK: - Dependencies
-    @IBOutlet weak var store: RestaurantListStore?
+    @IBOutlet weak var store: RestaurantStore?
     @IBOutlet weak var fetcher: RestaurantListFetcher?
     
     // MARK: - UITableViewDelegate
@@ -27,6 +27,5 @@ class RestaurantListDelegate: NSObject, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-
 
 }

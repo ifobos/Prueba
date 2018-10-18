@@ -14,7 +14,7 @@ class RestaurantListDataSource: NSObject, UITableViewDataSource {
     }
     
     // MARK: - Dependencies
-    @IBOutlet weak var store: RestaurantListStore?
+    @IBOutlet weak var store: RestaurantStore?
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,7 +29,7 @@ class RestaurantListDataSource: NSObject, UITableViewDataSource {
             return UITableViewCell()
         }
         if let restaurant = store?.restaurants[indexPath.row] {
-            cell.textLabel?.text = "\(indexPath.row)  " + (restaurant.name ?? "")
+            cell.textLabel?.text = "\(indexPath.row + 1) - " + (restaurant.name ?? "")
             cell.detailTextLabel?.text = restaurant.coordinates
         }
         return cell

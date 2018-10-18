@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        TokenService.shared.setup()
+        TokenService.Configurator.setup()
+        MapsConfigurator.setup()
         return true
     }
 
